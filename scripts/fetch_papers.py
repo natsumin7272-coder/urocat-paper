@@ -20,7 +20,7 @@ DATA_DIR = ROOT / "data"
 PAPERS_PATH = DATA_DIR / "papers.json"
 STATE_PATH = DATA_DIR / "state.json"
 
-APP_NAME = "UroCat_Paper"
+APP_NAME = "UroCat_Paper_V3"
 NCBI_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "3"))
 RETMAX = int(os.getenv("RETMAX", "80"))
@@ -62,7 +62,7 @@ SEARCHES = [
     },
     {
         "category": "新素材・コーティング",
-        "query": f'(({TECH_ANCHOR}) AND (coating*[tiab] OR "surface modification"[tiab] OR hydrogel*[tiab] OR nanocoat*[tiab] OR nanoparticle*[tiab] OR nanostructur*[tiab] OR antibiofilm[tiab] OR "anti-biofilm"[tiab] OR antimicrobial[tiab] OR antifouling[tiab] OR "anti-fouling"[tiab] OR sensor*[tiab] OR "smart catheter"[tiab] OR lubricant*[tiab]))'
+        "query": f'(({TECH_ANCHOR}) AND ((coating*[tiab] OR "surface modification"[tiab] OR hydrogel*[tiab] OR nanocoat*[tiab] OR nanoparticle*[tiab] OR nanostructur*[tiab] OR antibiofilm[tiab] OR "anti-biofilm"[tiab] OR antifouling[tiab] OR "anti-fouling"[tiab] OR sensor*[tiab] OR "smart catheter"[tiab] OR lubricant*[tiab] OR "surface treatment"[tiab] OR "surface engineering"[tiab]) OR ((antimicrobial[tiab] OR antibacterial[tiab]) AND (coating*[tiab] OR material*[tiab] OR surface*[tiab] OR silicone[tiab] OR polymer*[tiab] OR hydrogel*[tiab] OR device*[tiab]))))'
     },
 ]
 
@@ -83,6 +83,26 @@ TECH_TERMS = {
     "anti-fouling": 1, "surface modification": 1, "smart catheter": 1,
     "sensor": 1, "lubric": 1,
 }
+
+# Terms that by themselves strongly indicate that the catheter/device surface is being studied.
+# Generic words such as "antimicrobial" are intentionally excluded because they also occur in
+# stewardship and infection-prevention papers where the catheter is only a background factor.
+STRONG_TECH_TERMS = [
+    "coating", "coated", "hydrogel", "nanoparticle", "nanostruct", "nanocoat",
+    "antibiofilm", "anti-biofilm", "antifouling", "anti-fouling",
+    "surface modification", "surface treatment", "surface engineering",
+    "smart catheter", "sensor", "lubric", "silicone catheter", "polymer catheter",
+]
+MATERIAL_CONTEXT_TERMS = [
+    "coating", "coated", "material", "surface", "silicone", "polymer", "hydrogel",
+    "nanoparticle", "nanostruct", "device", "film", "layer", "zwitterion",
+]
+DOMAIN_FOCUS_TERMS = [
+    "blockage", "obstruction", "occlusion", "encrust", "crystalline biofilm", "struvite",
+    "urease", "proteus mirabilis", "biofilm", "microbiom", "microbiota", "urobiom",
+    "16s rrna", "metagenom", "washout", "irrigation", "catheter change",
+    "catheter replacement", "bypassing", "leakage",
+]
 NEGATIVE_TERMS = {
     "central venous": -5, "central line": -5, "vascular catheter": -5,
     "dialysis catheter": -5, "peripheral intravenous": -5, "picc": -5,
@@ -123,8 +143,50 @@ def has_urinary_catheter_anchor(text: str) -> bool:
     return bool(re.search(r"\b(?:urinary|urethral|foley) catheters?\b", t))
 
 
+def split_sentences(text: str) -> List[str]:
+    """Loose sentence splitter used only for relevance gating, not linguistic analysis."""
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+|\n+", str(text or "")) if s.strip()]
+
+
+def has_term(text: str, terms: Iterable[str]) -> bool:
+    t = text.lower()
+    return any(term in t for term in terms)
+
+
+def catheter_focus_evidence(p: Dict[str, Any]) -> tuple[bool, str]:
+    """Require evidence that the urinary catheter itself is a study focus, not a background covariate."""
+    title = str(p.get("title", ""))
+    abstract = str(p.get("abstract", ""))
+    title_l = title.lower()
+
+    # Strongest evidence: catheter appears in the title with an in-scope mechanism/technology.
+    if has_urinary_catheter_anchor(title_l):
+        if has_indwelling_anchor(title_l) or has_term(title_l, DOMAIN_FOCUS_TERMS) or has_term(title_l, STRONG_TECH_TERMS):
+            return True, "タイトルで尿道カテーテルが主題"
+
+    # Clinical/mechanistic evidence: catheter and the target mechanism must co-occur in one sentence.
+    for sent in split_sentences(f"{title}. {abstract}"):
+        s = sent.lower()
+        if has_indwelling_anchor(s) and has_term(s, DOMAIN_FOCUS_TERMS):
+            return True, "同一文で留置カテーテル×研究主題"
+
+    # Device/material evidence: urinary catheter and a strong material/device term must co-occur.
+    for sent in split_sentences(f"{title}. {abstract}"):
+        s = sent.lower()
+        if not has_urinary_catheter_anchor(s):
+            continue
+        if has_term(s, STRONG_TECH_TERMS):
+            return True, "同一文で尿道カテーテル×材料/技術"
+        # "antimicrobial/antibacterial" is accepted only when a material/surface/device context
+        # occurs in that same sentence. This blocks stewardship papers.
+        if ("antimicrobial" in s or "antibacterial" in s) and has_term(s, MATERIAL_CONTEXT_TERMS):
+            return True, "同一文で尿道カテーテル×抗菌材料"
+
+    return False, "尿道カテーテルが研究主題である証拠不足"
+
+
 def hard_eligibility(p: Dict[str, Any]) -> tuple[bool, str]:
-    """High-precision eligibility gate before a paper enters the app."""
+    """V3 high-precision gate: first prove catheter focus, then classify the study topic."""
     title = str(p.get("title", ""))
     abstract = str(p.get("abstract", ""))
     t = f"{title} {abstract}".lower()
@@ -133,40 +195,48 @@ def hard_eligibility(p: Dict[str, Any]) -> tuple[bool, str]:
     if not t.strip():
         return False, "タイトル・Abstractなし"
 
-    tech = "新素材・コーティング" in cats or any(x in t for x in TECH_TERMS)
-    direct = any(x in t for x in DIRECT_TERMS)
-    research = any(x in t for x in ["biofilm", "microbiom", "microbiota", "urobiom", "urease", "proteus mirabilis", "16s rrna", "metagenom"])
+    # Explicit out-of-scope modalities.
+    if any(x in t for x in INTERMITTENT_TERMS):
+        # Keep only if a genuine device/material study focuses on the catheter itself.
+        focus, focus_reason = catheter_focus_evidence(p)
+        if not (focus and has_term(t, STRONG_TECH_TERMS)):
+            return False, "間欠導尿"
 
-    # Intermittent catheterization is outside the clinical scope. Keep only a genuine material/device study.
-    if any(x in t for x in INTERMITTENT_TERMS) and not tech:
-        return False, "間欠導尿"
+    direct = has_term(t, DIRECT_TERMS.keys())
+    research = has_term(t, ["biofilm", "microbiom", "microbiota", "urobiom", "urease", "proteus mirabilis", "16s rrna", "metagenom"])
+    strong_tech = has_term(t, STRONG_TECH_TERMS) or (("antimicrobial" in t or "antibacterial" in t) and has_term(t, MATERIAL_CONTEXT_TERMS))
 
-    # Perioperative catheter status is not enough; retain only if the catheter itself is studied mechanistically/technically.
-    if any(x in t for x in PERIOPERATIVE_TERMS) and not (direct or research or tech):
+    if any(x in t for x in PERIOPERATIVE_TERMS) and not (direct or research or strong_tech):
         return False, "周術期カテーテルのみ"
 
-    # Generic stewardship/infection-prevention papers are excluded unless catheter biofilm/long-term mechanisms are explicit.
-    if any(x in t for x in GENERIC_INFECTION_TERMS) and not (direct or research or tech):
+    # Generic infection/stewardship work can never become a technology paper just because
+    # the word antimicrobial is present.
+    if any(x in t for x in GENERIC_INFECTION_TERMS) and not (direct or research or strong_tech):
         return False, "一般的感染対策"
 
-    if tech:
-        if not has_urinary_catheter_anchor(t):
-            return False, "尿道/尿路カテーテル技術ではない"
-        return True, "尿道/尿路カテーテル技術"
-
-    # Clinical/mechanistic tracks require explicit indwelling/Foley context in title/abstract.
-    if not has_indwelling_anchor(t):
-        return False, "留置尿道カテーテルの明示なし"
+    focus, focus_reason = catheter_focus_evidence(p)
+    if not focus:
+        return False, focus_reason
 
     if "閉塞・結晶・ストルバイト" in cats and direct:
-        return True, "留置カテーテル×閉塞/結晶"
+        return True, f"{focus_reason}／閉塞・結晶"
     if "Biofilm・微生物叢" in cats and research:
-        return True, "留置カテーテル×biofilm/微生物"
-    if "長期管理・閉塞予防" in cats and any(x in t for x in ["washout", "irrigation", "catheter change", "catheter replacement", "maintenance", "blockage", "obstruction", "encrustation", "bypassing", "leakage"]):
-        return True, "長期留置カテーテル管理"
+        return True, f"{focus_reason}／biofilm・微生物"
+    if "長期管理・閉塞予防" in cats and has_term(t, ["washout", "irrigation", "catheter change", "catheter replacement", "maintenance", "blockage", "obstruction", "encrustation", "bypassing", "leakage"]):
+        return True, f"{focus_reason}／長期管理"
+    if "新素材・コーティング" in cats and strong_tech:
+        return True, f"{focus_reason}／材料・技術"
+
+    # Existing records may not have category metadata after older versions. Permit only when
+    # the evidence itself is very strong; this also lets V3 re-evaluate and purge the library.
+    if direct and has_indwelling_anchor(t):
+        return True, f"{focus_reason}／閉塞機序"
+    if research and has_indwelling_anchor(t):
+        return True, f"{focus_reason}／biofilm・微生物"
+    if strong_tech and has_urinary_catheter_anchor(t):
+        return True, f"{focus_reason}／材料・技術"
 
     return False, "主題が対象外"
-
 
 def http_get(url: str, params: Dict[str, Any], timeout: int = 30) -> bytes:
     query = urllib.parse.urlencode(params)
