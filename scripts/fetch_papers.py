@@ -1,5 +1,118 @@
+できればこのスクショのような内容でスラック通知もしくはアプリ通知をすまほにおくってほしいんだ。それってかのう？1から作り直すつもりでやっていい。私専用のアプリを作ってくれない？
+これいま
+　こうなっているのに、ドロップするとthis file is hiddenになる
+できた！
+　３，４
+　どうするねん
+貼り付けたマークダウン（1）(8).md
+ファイル
+
+では、Gmail対応版に進めます。現在のコードでは Slack 通知が send_slack() として独立しているので、PubMed検索・対象論文の厳格判定・★評価・AI要約部分は維持し、通知だけGmailへ置換できます。
+
+すでに登録した3つのSecrets、
+
+GMAIL_ADDRESS
+GMAIL_APP_PASSWORD
+GMAIL_TO
+
+を使う形にします。
+
+メール本文は、たとえば次のようにします。
+
+📚 UroCat Paper｜本日の重要新着論文 2報
+
+
+━━━━━━━━━━━━━━━━━━
+★★★★★　閉塞・結晶
+━━━━━━━━━━━━━━━━━━
+
+
+Nitric oxide-releasing balloon inflation fluid for Foley catheters...
+
+
+【日本語タイトル】
+フォーリーカテーテルのための一酸化窒素放出型バルーン充填液...
+
+
+【何を調べた？】
+……
+
+
+【対象】
+……
+
+
+【研究デザイン】
+……
+
+
+【主な結果】
+……
+
+
+【あなたの研究になぜ重要？】
+……
+
+
+Journal: Microbiology Spectrum
+PMID: 42370677
+
+
+PubMedで読む
+UroCat Paperで確認
+
+そして動作は、毎朝PubMed検索 → 厳格な対象判定 → ★評価 → ★4–5のみAI要約 → UroCat Paper更新 → 新規★4–5があればGmail送信、0報なら送信なし、という流れにします。現在のAI enrichmentも★4以上を対象にする設定なので、その設計をそのまま利用できます。
+
+一点だけ重要です。今のコードには SLACK_MIN_SCORE などSlack用設定が残っているため、単にメール送信関数を追加するだけでなく、Slack関連をきれいに除去した完成版へ丸ごと置換します。
+
+次の画面は GitHub → scripts/fetch_papers.py → 鉛筆マーク ✏️ を開いてください。
+開いたら、そこに貼る完成版コードを丸ごと出します。
+
+うん！
+
+はい。では scripts/fetch_papers.py の編集画面を開いて、今あるコードを全部選択（Ctrl+A）して削除してください。
+
+そのあと、こちらで出す Gmail対応の完成版コードを丸ごと貼り付ける形にします。
+
+ただし、前のコードの「PubMed検索条件・厳格な対象判定・★スコア・OpenAI要約」は壊したくないので、正確に置換するために、現在の fetch_papers.py 全文を基準にしてGmail版へ変更します。
+
+今 scripts/fetch_papers.py の編集画面を開いた状態にしてください。
+開けたらスクショは不要です。「開いた」とだけ送ってください。
+
+消したよ
+
+できました。現在のV3検索・Gate判定・★評価・OpenAI要約はそのまま残し、Slack通知だけGmail通知へ置き換えた完成版です。現在のコードではSlack通知が独立した関数になっていたため、そこをGmail送信へ差し替えています。
+
+こちらを開いてください。
+
+fetch_papers_gmail.py をダウンロード
+
+今GitHubの scripts/fetch_papers.py を全部消した状態なので、次の操作だけしてください。
+
+ダウンロードした fetch_papers_gmail.py をメモ帳で開く
+Ctrl+A → Ctrl+C
+GitHubの空になっている編集欄へ Ctrl+V
+GitHub上のファイル名は fetch_papers.py のまま変更しない
+Commit changes...
+
+Commit messageは、
+
+Replace Slack notification with Gmail
+
+でOKです。
+
+この版では、新規論文のうち★4以上だけをGmailへ送り、該当論文が0報ならメールを送りません。メールには英語タイトル、日本語タイトル、対象、研究デザイン、主結果、研究との関連性、Journal、PMID、PubMed/DOI、UroCat Paperへのボタンを入れています。
+
+貼り付けてCommitできたら教えてください。次に daily.yml にGmailの3つのSecretを接続する修正をします。
+
+fetch_papers_gmail.py
+コード
+
+ライブラリ
+/
+fetch_papers_gmail.py
 #!/usr/bin/env python3
-"""UroCat Paper: fetch recent PubMed papers, rank relevance, optionally summarize with OpenAI, and notify Slack."""
+"""UroCat Paper: fetch recent PubMed papers, rank relevance, optionally summarize with OpenAI, and notify Gmail."""
 from __future__ import annotations
 
 import datetime as dt
@@ -7,11 +120,14 @@ import html
 import json
 import os
 import re
+import smtplib
+import ssl
 import sys
 import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from email.message import EmailMessage
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
@@ -24,8 +140,9 @@ APP_NAME = "UroCat_Paper_V3"
 NCBI_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 LOOKBACK_DAYS = int(os.getenv("LOOKBACK_DAYS", "3"))
 RETMAX = int(os.getenv("RETMAX", "80"))
-SLACK_MIN_SCORE = int(os.getenv("SLACK_MIN_SCORE", "4"))
-SLACK_MAX_PAPERS = int(os.getenv("SLACK_MAX_PAPERS", "6"))
+EMAIL_MIN_SCORE = int(os.getenv("EMAIL_MIN_SCORE", "4"))
+EMAIL_MAX_PAPERS = int(os.getenv("EMAIL_MAX_PAPERS", "6"))
+APP_URL = os.getenv("APP_URL", "https://natsumin7272-coder.github.io/urocat-paper/")
 OPENAI_MIN_SCORE = int(os.getenv("OPENAI_MIN_SCORE", "4"))
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.6")
 
@@ -445,50 +562,126 @@ def save_json(path: Path, obj: Any) -> None:
     path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def slack_escape(s: str) -> str:
-    return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+def _email_selected(new_papers: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    selected = [p for p in new_papers if int(p.get("final_score", p.get("relevance_score", 1))) >= EMAIL_MIN_SCORE]
+    selected.sort(
+        key=lambda x: (int(x.get("final_score", x.get("relevance_score", 1))), x.get("publication_date", "")),
+        reverse=True,
+    )
+    return selected[:EMAIL_MAX_PAPERS]
 
 
-def send_slack(new_papers: List[Dict[str, Any]]) -> None:
-    webhook = os.getenv("SLACK_WEBHOOK_URL", "").strip()
-    if not webhook:
-        print("SLACK_WEBHOOK_URL not set; skipping Slack.")
-        return
-    selected = [p for p in new_papers if int(p.get("final_score", p.get("relevance_score", 1))) >= SLACK_MIN_SCORE]
-    selected.sort(key=lambda x: (int(x.get("final_score", x.get("relevance_score", 1))), x.get("publication_date", "")), reverse=True)
-    selected = selected[:SLACK_MAX_PAPERS]
-    if not selected:
-        print("No high-relevance papers to notify.")
-        return
-
-    blocks: List[Dict[str, Any]] = [{"type": "header", "text": {"type": "plain_text", "text": f"📚 UroCat Paper｜新着 {len(selected)}報", "emoji": True}}]
-    blocks.append({"type": "context", "elements": [{"type": "mrkdwn", "text": "ヒトの尿道留置カテーテル・閉塞・結晶・biofilmを優先して選別"}]})
-    for i, p in enumerate(selected):
-        if i:
-            blocks.append({"type": "divider"})
+def _plain_email(selected: List[Dict[str, Any]]) -> str:
+    lines = [
+        f"📚 UroCat Paper｜本日の重要新着論文 {len(selected)}報",
+        "",
+        "尿道留置カテーテル、閉塞・結晶、biofilm・微生物叢、新素材・コーティングを優先して選別しています。",
+        "",
+    ]
+    for i, p in enumerate(selected, start=1):
         score = int(p.get("final_score", p.get("relevance_score", 1)))
         stars = "★" * score + "☆" * (5 - score)
-        title = slack_escape(p.get("title", ""))
-        jtitle = slack_escape(p.get("japanese_title") or "日本語タイトル未生成")
-        url = p.get("pubmed_url", "")
-        meta = "｜".join(x for x in [p.get("journal", ""), p.get("publication_date", ""), f"PMID {p.get('pmid','')}" ] if x)
-        summary = p.get("one_line_ja") or p.get("why_relevant_ja") or "Abstractをアプリで確認してください。"
-        fields = []
-        if p.get("population"): fields.append({"type": "mrkdwn", "text": f"*対象*\n{slack_escape(p['population'])}"})
-        if p.get("study_design"): fields.append({"type": "mrkdwn", "text": f"*デザイン*\n{slack_escape(p['study_design'])}"})
-        blocks.extend([
-            {"type": "section", "text": {"type": "mrkdwn", "text": f"*{stars}  {slack_escape(p.get('topic',''))}*\n<{url}|*{title}*>\n{jtitle}"}},
-            {"type": "context", "elements": [{"type": "mrkdwn", "text": slack_escape(meta)}]},
-        ])
-        if fields:
-            blocks.append({"type": "section", "fields": fields[:2]})
-        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": f"*要点*\n{slack_escape(summary)}"}})
+        lines.extend(["━" * 34, f"{i}. {stars}　{p.get('topic', '')}", "━" * 34, p.get("title", "")])
+        for label, key in [
+            ("日本語タイトル", "japanese_title"),
+            ("何を調べた？", "one_line_ja"),
+            ("対象", "population"),
+            ("研究デザイン", "study_design"),
+            ("主な結果", "main_finding_ja"),
+            ("あなたの研究になぜ重要？", "why_relevant_ja"),
+        ]:
+            if p.get(key):
+                lines.extend(["", f"【{label}】", str(p[key])])
+        meta = "｜".join(x for x in [p.get("journal", ""), p.get("publication_date", ""), f"PMID {p.get('pmid','')}" if p.get("pmid") else ""] if x)
+        if meta:
+            lines.extend(["", meta])
+        if p.get("pubmed_url"):
+            lines.append(f"PubMed: {p['pubmed_url']}")
+        if p.get("doi_url"):
+            lines.append(f"DOI: {p['doi_url']}")
+        lines.append("")
+    lines.extend(["━" * 34, f"UroCat Paper: {APP_URL}"])
+    return "\n".join(lines)
 
-    payload = json.dumps({"text": f"UroCat Paper: {len(selected)} new high-relevance papers", "blocks": blocks}, ensure_ascii=False).encode("utf-8")
-    req = urllib.request.Request(webhook, data=payload, headers={"Content-Type": "application/json; charset=utf-8"}, method="POST")
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        print("Slack:", resp.status, resp.read().decode("utf-8", errors="replace"))
 
+def _html_email(selected: List[Dict[str, Any]]) -> str:
+    cards: List[str] = []
+    for p in selected:
+        score = int(p.get("final_score", p.get("relevance_score", 1)))
+        stars = "★" * score + "☆" * (5 - score)
+        title = html.escape(str(p.get("title", "")))
+        topic = html.escape(str(p.get("topic", "")))
+        journal = html.escape(str(p.get("journal", "")))
+        pubdate = html.escape(str(p.get("publication_date", "")))
+        pmid = html.escape(str(p.get("pmid", "")))
+        pubmed_url = html.escape(str(p.get("pubmed_url", "")), quote=True)
+        doi_url = html.escape(str(p.get("doi_url", "")), quote=True)
+        details: List[str] = []
+        for label, key in [
+            ("日本語タイトル", "japanese_title"),
+            ("何を調べた？", "one_line_ja"),
+            ("対象", "population"),
+            ("研究デザイン", "study_design"),
+            ("主な結果", "main_finding_ja"),
+            ("あなたの研究になぜ重要？", "why_relevant_ja"),
+        ]:
+            if p.get(key):
+                value = html.escape(str(p[key]))
+                details.append(f'<div style="margin-top:12px"><b>{label}</b><br>{value}</div>')
+        links: List[str] = []
+        if pubmed_url:
+            links.append(f'<a href="{pubmed_url}" style="display:inline-block;padding:9px 14px;margin-right:8px;background:#0f6b78;color:#fff;text-decoration:none;border-radius:8px">PubMedで読む</a>')
+        if doi_url:
+            links.append(f'<a href="{doi_url}" style="display:inline-block;padding:9px 14px;background:#eef3f6;color:#234;text-decoration:none;border-radius:8px">DOI</a>')
+        card = (
+            '<div style="background:#ffffff;border:1px solid #dbe5ea;border-radius:14px;padding:18px;margin:16px 0">'
+            f'<div style="font-weight:700;color:#9a6a00">{stars}</div>'
+            f'<div style="font-size:13px;color:#46727b;margin:4px 0 10px">{topic}</div>'
+            f'<div style="font-size:18px;font-weight:700;line-height:1.45;color:#18324a">{title}</div>'
+            + ''.join(details)
+            + f'<div style="margin-top:14px;font-size:12px;color:#697b88">{journal}｜{pubdate}｜PMID {pmid}</div>'
+            + f'<div style="margin-top:14px">{"".join(links)}</div>'
+            + '</div>'
+        )
+        cards.append(card)
+    app_url = html.escape(APP_URL, quote=True)
+    return (
+        '<!doctype html><html><body style="margin:0;background:#f3f7f9;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif;color:#243746">'
+        '<div style="max-width:720px;margin:0 auto;padding:24px">'
+        '<div style="background:#123f56;color:#fff;padding:24px;border-radius:16px">'
+        '<div style="font-size:12px;letter-spacing:.12em;font-weight:700;opacity:.8">PERSONAL RESEARCH FEED</div>'
+        '<div style="font-size:30px;font-weight:800;margin-top:6px">📚 UroCat Paper</div>'
+        f'<div style="margin-top:8px">本日の重要新着論文 {len(selected)}報</div></div>'
+        + ''.join(cards)
+        + f'<div style="text-align:center;margin:24px 0"><a href="{app_url}" style="display:inline-block;padding:12px 18px;background:#123f56;color:#fff;text-decoration:none;border-radius:10px">UroCat Paperを開く</a></div>'
+        + f'<div style="font-size:12px;color:#758791;text-align:center">★{EMAIL_MIN_SCORE}以上の新着論文がある日にのみ送信します。</div>'
+        + '</div></body></html>'
+    )
+
+
+def send_gmail(new_papers: List[Dict[str, Any]]) -> None:
+    gmail_address = os.getenv("GMAIL_ADDRESS", "").strip()
+    gmail_password = os.getenv("GMAIL_APP_PASSWORD", "").replace(" ", "").strip()
+    gmail_to = os.getenv("GMAIL_TO", "").strip()
+    if not gmail_address or not gmail_password or not gmail_to:
+        print("Gmail secrets not fully set; skipping email notification.")
+        return
+    selected = _email_selected(new_papers)
+    if not selected:
+        print("No high-relevance papers to email.")
+        return
+    today_jst = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).strftime("%Y-%m-%d")
+    msg = EmailMessage()
+    msg["Subject"] = f"📚 UroCat Paper｜重要新着論文 {len(selected)}報｜{today_jst}"
+    msg["From"] = gmail_address
+    msg["To"] = gmail_to
+    msg.set_content(_plain_email(selected))
+    msg.add_alternative(_html_email(selected), subtype="html")
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context, timeout=30) as smtp:
+        smtp.login(gmail_address, gmail_password)
+        smtp.send_message(msg)
+    print(f"Gmail: sent {len(selected)} high-relevance paper(s) to {gmail_to}")
 
 def main() -> int:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -560,14 +753,14 @@ def main() -> int:
         "lookback_days": LOOKBACK_DAYS,
         "papers_total": len(merged),
         "new_today": len(new_papers),
-        "high_relevance_new": sum(1 for p in new_papers if int(p.get("final_score", p.get("relevance_score", 1))) >= SLACK_MIN_SCORE),
+        "high_relevance_new": sum(1 for p in new_papers if int(p.get("final_score", p.get("relevance_score", 1))) >= EMAIL_MIN_SCORE),
         "excluded_this_run": len(excluded),
     })
     if excluded:
         print("Excluded by strict eligibility gate:")
         for x in excluded[:30]:
             print(f"  - PMID {x['pmid']}: {x['reason']} | {x['title'][:120]}")
-    send_slack(new_papers)
+    send_gmail(new_papers)
     print(f"Saved {len(merged)} eligible papers; {len(new_papers)} newly discovered; {len(excluded)} excluded.")
     return 0
 
