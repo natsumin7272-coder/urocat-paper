@@ -29,48 +29,143 @@ SLACK_MAX_PAPERS = int(os.getenv("SLACK_MAX_PAPERS", "6"))
 OPENAI_MIN_SCORE = int(os.getenv("OPENAI_MIN_SCORE", "4"))
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.6")
 
-# Deliberately centered on urinary/urethral/Foley catheters. Broad catheter-only searches are avoided.
+# Strict PubMed entry gate.
+# Clinical searches require indwelling/Foley urinary catheter wording in Title/Abstract.
+# MeSH-only matches are deliberately NOT used at the retrieval stage because they created
+# many papers where catheterization was only a background variable.
+INDWELLING_ANCHOR = (
+    '"indwelling urinary catheter"[tiab] OR "indwelling urinary catheters"[tiab] OR '
+    '"indwelling urethral catheter"[tiab] OR "indwelling urethral catheters"[tiab] OR '
+    '"Foley catheter"[tiab] OR "Foley catheters"[tiab] OR '
+    '("urinary catheter"[tiab] AND (indwelling[tiab] OR long-term[tiab] OR chronic[tiab])) OR '
+    '("urethral catheter"[tiab] AND (indwelling[tiab] OR long-term[tiab] OR chronic[tiab]))'
+)
+
+TECH_ANCHOR = (
+    '"urinary catheter"[tiab] OR "urinary catheters"[tiab] OR '
+    '"urethral catheter"[tiab] OR "urethral catheters"[tiab] OR '
+    '"Foley catheter"[tiab] OR "Foley catheters"[tiab]'
+)
+
 SEARCHES = [
     {
         "category": "閉塞・結晶・ストルバイト",
-        "query": '(("Urinary Catheters"[Mesh] OR "Urinary Catheterization"[Mesh] OR "urinary catheter"[tiab] OR "urinary catheters"[tiab] OR "urethral catheter"[tiab] OR "urethral catheters"[tiab] OR "Foley catheter"[tiab] OR "Foley catheters"[tiab] OR "indwelling urinary catheter"[tiab] OR "indwelling urinary catheters"[tiab]) AND (block*[tiab] OR obstruct*[tiab] OR occlus*[tiab] OR encrust*[tiab] OR "crystalline biofilm"[tiab] OR struvite[tiab] OR urease[tiab] OR "Proteus mirabilis"[tiab]))'
+        "query": f'(({INDWELLING_ANCHOR}) AND (block*[tiab] OR obstruct*[tiab] OR occlus*[tiab] OR encrust*[tiab] OR "crystalline biofilm"[tiab] OR struvite[tiab] OR urease[tiab] OR "Proteus mirabilis"[tiab] OR crystall*[tiab]))'
     },
     {
         "category": "Biofilm・微生物叢",
-        "query": '(("Urinary Catheters"[Mesh] OR "Urinary Catheterization"[Mesh] OR "urinary catheter"[tiab] OR "urinary catheters"[tiab] OR "urethral catheter"[tiab] OR "urethral catheters"[tiab] OR "Foley catheter"[tiab] OR "Foley catheters"[tiab] OR "indwelling urinary catheter"[tiab] OR "indwelling urinary catheters"[tiab]) AND (biofilm*[tiab] OR microbiom*[tiab] OR microbiota[tiab] OR urobiom*[tiab] OR "16S rRNA"[tiab] OR metagenom*[tiab] OR urease[tiab] OR "Proteus mirabilis"[tiab]))'
+        "query": f'(({INDWELLING_ANCHOR}) AND (biofilm*[tiab] OR microbiom*[tiab] OR microbiota[tiab] OR urobiom*[tiab] OR "16S rRNA"[tiab] OR metagenom*[tiab] OR urease[tiab] OR "Proteus mirabilis"[tiab] OR colonization[tiab] OR colonisation[tiab]))'
     },
     {
-        "category": "管理・予防",
-        "query": '(("Urinary Catheters"[Mesh] OR "Urinary Catheterization"[Mesh] OR "urinary catheter"[tiab] OR "urinary catheters"[tiab] OR "urethral catheter"[tiab] OR "Foley catheter"[tiab] OR "indwelling urinary catheter"[tiab]) AND ("long-term"[tiab] OR chronic[tiab] OR community[tiab] OR nursing[tiab] OR washout*[tiab] OR irrigation[tiab] OR "catheter change"[tiab] OR "catheter replacement"[tiab] OR blockage[tiab] OR encrustation[tiab]))'
+        "category": "長期管理・閉塞予防",
+        "query": f'(({INDWELLING_ANCHOR}) AND ("long-term"[tiab] OR chronic[tiab]) AND (washout*[tiab] OR irrigation[tiab] OR "catheter change"[tiab] OR "catheter replacement"[tiab] OR maintenance[tiab] OR blockage[tiab] OR obstruction[tiab] OR encrustation[tiab] OR bypassing[tiab] OR leakage[tiab]))'
     },
     {
         "category": "新素材・コーティング",
-        "query": '(("urinary catheter"[tiab] OR "urinary catheters"[tiab] OR "urethral catheter"[tiab] OR "urethral catheters"[tiab] OR "Foley catheter"[tiab] OR "Foley catheters"[tiab]) AND (coating*[tiab] OR "surface modification"[tiab] OR hydrogel*[tiab] OR nanocoat*[tiab] OR nanoparticle*[tiab] OR nanostructur*[tiab] OR antibiofilm[tiab] OR antimicrobial[tiab] OR antifouling[tiab] OR sensor*[tiab] OR "smart catheter"[tiab]))'
+        "query": f'(({TECH_ANCHOR}) AND (coating*[tiab] OR "surface modification"[tiab] OR hydrogel*[tiab] OR nanocoat*[tiab] OR nanoparticle*[tiab] OR nanostructur*[tiab] OR antibiofilm[tiab] OR "anti-biofilm"[tiab] OR antimicrobial[tiab] OR antifouling[tiab] OR "anti-fouling"[tiab] OR sensor*[tiab] OR "smart catheter"[tiab] OR lubricant*[tiab]))'
     },
 ]
 
 DIRECT_TERMS = {
-    "blockage": 3, "obstruction": 3, "obstructed": 3, "encrustation": 3,
-    "encrusted": 3, "crystalline biofilm": 3, "struvite": 3,
-    "urease": 2, "proteus mirabilis": 2, "catheter blockage": 3,
+    "blockage": 3, "obstruction": 3, "obstructed": 3, "occlusion": 3,
+    "encrustation": 3, "encrusted": 3, "crystalline biofilm": 3,
+    "struvite": 3, "urease": 2, "proteus mirabilis": 2,
+    "catheter blockage": 3, "crystal": 1,
 }
 RESEARCH_TERMS = {
-    "biofilm": 1, "microbiome": 2, "microbiota": 1, "urobiome": 2,
+    "biofilm": 2, "microbiome": 2, "microbiota": 1, "urobiome": 2,
     "16s rrna": 1, "metagenom": 1, "metabolom": 1, "picrust": 1,
-    "urinary ph": 1, "alkaline urine": 1, "crystal": 1,
+    "urinary ph": 1, "alkaline urine": 1, "colonization": 1, "colonisation": 1,
 }
 TECH_TERMS = {
-    "coating": 1, "hydrogel": 1, "nanoparticle": 1, "nanostruct": 1,
-    "antibiofilm": 2, "antifouling": 1, "surface modification": 1,
-    "smart catheter": 1, "sensor": 1,
+    "coating": 2, "hydrogel": 1, "nanoparticle": 1, "nanostruct": 1,
+    "nanocoat": 1, "antibiofilm": 2, "anti-biofilm": 2, "antifouling": 1,
+    "anti-fouling": 1, "surface modification": 1, "smart catheter": 1,
+    "sensor": 1, "lubric": 1,
 }
 NEGATIVE_TERMS = {
-    "central venous": -4, "central line": -4, "vascular catheter": -4,
-    "dialysis catheter": -4, "peripheral intravenous": -4, "picc": -4,
-    "cardiac catheter": -4, "pulmonary artery catheter": -4,
-    "epidural catheter": -4, "intrathecal catheter": -4,
+    "central venous": -5, "central line": -5, "vascular catheter": -5,
+    "dialysis catheter": -5, "peripheral intravenous": -5, "picc": -5,
+    "cardiac catheter": -5, "pulmonary artery catheter": -5,
+    "epidural catheter": -5, "intrathecal catheter": -5,
 }
-GENERIC_CAUTI_TERMS = ["surveillance", "incidence", "bundle", "compliance", "icu", "intensive care"]
+
+INTERMITTENT_TERMS = [
+    "intermittent catheterization", "intermittent catheterisation",
+    "intermittent urethral catheterization", "intermittent urethral catheterisation",
+    "clean intermittent catheterization", "clean intermittent catheterisation",
+    "self-catheterization", "self catheterization", "self-catheterisation",
+]
+PERIOPERATIVE_TERMS = [
+    "holep", "holmium laser enucleation", "turp", "transurethral resection",
+    "radical prostatectomy", "robot-assisted prostatectomy", "postoperative urinary retention",
+    "perioperative", "postoperative catheterization", "catheter-free trial",
+]
+GENERIC_INFECTION_TERMS = [
+    "antimicrobial stewardship", "infection prevention program", "infection prevention programme",
+    "surveillance study", "quality improvement", "bundle compliance",
+]
+
+
+def has_indwelling_anchor(text: str) -> bool:
+    t = text.lower()
+    patterns = [
+        r"\bindwelling (?:urinary|urethral) catheters?\b",
+        r"\bfoley catheters?\b",
+        r"\b(?:urinary|urethral) catheters?\b.{0,80}\b(?:indwelling|long[- ]term|chronic)\b",
+        r"\b(?:indwelling|long[- ]term|chronic)\b.{0,80}\b(?:urinary|urethral) catheters?\b",
+    ]
+    return any(re.search(p, t, flags=re.S) for p in patterns)
+
+
+def has_urinary_catheter_anchor(text: str) -> bool:
+    t = text.lower()
+    return bool(re.search(r"\b(?:urinary|urethral|foley) catheters?\b", t))
+
+
+def hard_eligibility(p: Dict[str, Any]) -> tuple[bool, str]:
+    """High-precision eligibility gate before a paper enters the app."""
+    title = str(p.get("title", ""))
+    abstract = str(p.get("abstract", ""))
+    t = f"{title} {abstract}".lower()
+    cats = set(p.get("search_categories", []))
+
+    if not t.strip():
+        return False, "タイトル・Abstractなし"
+
+    tech = "新素材・コーティング" in cats or any(x in t for x in TECH_TERMS)
+    direct = any(x in t for x in DIRECT_TERMS)
+    research = any(x in t for x in ["biofilm", "microbiom", "microbiota", "urobiom", "urease", "proteus mirabilis", "16s rrna", "metagenom"])
+
+    # Intermittent catheterization is outside the clinical scope. Keep only a genuine material/device study.
+    if any(x in t for x in INTERMITTENT_TERMS) and not tech:
+        return False, "間欠導尿"
+
+    # Perioperative catheter status is not enough; retain only if the catheter itself is studied mechanistically/technically.
+    if any(x in t for x in PERIOPERATIVE_TERMS) and not (direct or research or tech):
+        return False, "周術期カテーテルのみ"
+
+    # Generic stewardship/infection-prevention papers are excluded unless catheter biofilm/long-term mechanisms are explicit.
+    if any(x in t for x in GENERIC_INFECTION_TERMS) and not (direct or research or tech):
+        return False, "一般的感染対策"
+
+    if tech:
+        if not has_urinary_catheter_anchor(t):
+            return False, "尿道/尿路カテーテル技術ではない"
+        return True, "尿道/尿路カテーテル技術"
+
+    # Clinical/mechanistic tracks require explicit indwelling/Foley context in title/abstract.
+    if not has_indwelling_anchor(t):
+        return False, "留置尿道カテーテルの明示なし"
+
+    if "閉塞・結晶・ストルバイト" in cats and direct:
+        return True, "留置カテーテル×閉塞/結晶"
+    if "Biofilm・微生物叢" in cats and research:
+        return True, "留置カテーテル×biofilm/微生物"
+    if "長期管理・閉塞予防" in cats and any(x in t for x in ["washout", "irrigation", "catheter change", "catheter replacement", "maintenance", "blockage", "obstruction", "encrustation", "bypassing", "leakage"]):
+        return True, "長期留置カテーテル管理"
+
+    return False, "主題が対象外"
 
 
 def http_get(url: str, params: Dict[str, Any], timeout: int = 30) -> bytes:
@@ -181,11 +276,14 @@ def score_paper(p: Dict[str, Any]) -> Dict[str, Any]:
     score = 0
     reasons: List[str] = []
 
-    urinary_anchor = bool(re.search(r"\b(urinary|urethral|foley|indwelling urinary) catheter", text)) or "urinary catheters" in text
+    urinary_anchor = has_indwelling_anchor(f"{p.get('title','')} {p.get('abstract','')}")
+    tech_anchor = has_urinary_catheter_anchor(f"{p.get('title','')} {p.get('abstract','')}")
     if urinary_anchor:
-        score += 2; reasons.append("尿道/尿路カテーテル")
+        score += 3; reasons.append("留置尿道/尿路カテーテル")
+    elif tech_anchor and any(term in text for term in TECH_TERMS):
+        score += 2; reasons.append("尿道/尿路カテーテル技術")
     else:
-        score -= 2
+        score -= 3
 
     for term, pts in DIRECT_TERMS.items():
         if term in text:
@@ -205,8 +303,8 @@ def score_paper(p: Dict[str, Any]) -> Dict[str, Any]:
         score += 1; reasons.append("ヒト研究候補")
 
     direct_signal = any(term in text for term in DIRECT_TERMS)
-    if any(t in text for t in GENERIC_CAUTI_TERMS) and not direct_signal and not any(t in text for t in ["biofilm", "microbiom", "proteus", "urease", "long-term"]):
-        score -= 2; reasons.append("一般CAUTIサーベイランス寄り")
+    if any(t in text for t in GENERIC_INFECTION_TERMS) and not direct_signal and not any(t in text for t in ["biofilm", "microbiom", "proteus", "urease", "long-term"]):
+        score -= 3; reasons.append("一般感染対策寄り")
 
     # Map raw score to 1-5. Direct catheter blockage/encrustation papers should reliably reach 5.
     if score >= 8: stars = 5
@@ -350,8 +448,15 @@ def main() -> int:
 
     new_papers: List[Dict[str, Any]] = []
     now = dt.datetime.now(dt.timezone.utc).isoformat()
+    excluded: List[Dict[str, Any]] = []
     for p in records:
         p["search_categories"] = sorted(found.get(p.get("pmid", ""), set()))
+        eligible, eligibility_reason = hard_eligibility(p)
+        p["eligible"] = eligible
+        p["eligibility_reason"] = eligibility_reason
+        if not eligible:
+            excluded.append({"pmid": p.get("pmid", ""), "title": p.get("title", ""), "reason": eligibility_reason})
+            continue
         p = score_paper(p)
         p["final_score"] = p["relevance_score"]
         p["fetched_at"] = now
@@ -366,7 +471,17 @@ def main() -> int:
         old_by_id[p["pmid"]] = p
 
     # Keep a useful rolling library rather than growing forever.
-    merged = list(old_by_id.values())
+    # Purge demonstration data and papers that no longer pass the strict eligibility gate.
+    merged: List[Dict[str, Any]] = []
+    for old in old_by_id.values():
+        if str(old.get("pmid", "")).upper().startswith("DEMO"):
+            continue
+        ok, reason = hard_eligibility(old)
+        if not ok:
+            continue
+        old["eligible"] = True
+        old["eligibility_reason"] = reason
+        merged.append(old)
     merged.sort(key=lambda x: (x.get("publication_date", ""), int(x.get("final_score", x.get("relevance_score", 1)))), reverse=True)
     merged = merged[:1200]
     save_json(PAPERS_PATH, merged)
@@ -376,9 +491,14 @@ def main() -> int:
         "papers_total": len(merged),
         "new_today": len(new_papers),
         "high_relevance_new": sum(1 for p in new_papers if int(p.get("final_score", p.get("relevance_score", 1))) >= SLACK_MIN_SCORE),
+        "excluded_this_run": len(excluded),
     })
+    if excluded:
+        print("Excluded by strict eligibility gate:")
+        for x in excluded[:30]:
+            print(f"  - PMID {x['pmid']}: {x['reason']} | {x['title'][:120]}")
     send_slack(new_papers)
-    print(f"Saved {len(merged)} papers; {len(new_papers)} newly discovered.")
+    print(f"Saved {len(merged)} eligible papers; {len(new_papers)} newly discovered; {len(excluded)} excluded.")
     return 0
 
 
