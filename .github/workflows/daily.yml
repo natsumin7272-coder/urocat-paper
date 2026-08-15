@@ -1,0 +1,51 @@
+name: Daily PubMed update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 7 * * *'
+      timezone: 'Asia/Tokyo'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Fetch PubMed and notify Slack
+        env:
+          NCBI_EMAIL: ${{ secrets.NCBI_EMAIL }}
+          NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.6' }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          LOOKBACK_DAYS: '3'
+          SLACK_MIN_SCORE: '4'
+          SLACK_MAX_PAPERS: '6'
+          OPENAI_MIN_SCORE: '4'
+        run: python scripts/fetch_papers.py
+
+      - name: Commit updated paper data
+        run: |
+          git config user.name "urocat-paper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/papers.json data/state.json
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "chore: update PubMed feed"
+            git push
+          fi
