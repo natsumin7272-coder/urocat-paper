@@ -34,8 +34,8 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           GMAIL_TO: ${{ secrets.GMAIL_TO }}
           LOOKBACK_DAYS: '3'
-          SLACK_MIN_SCORE: '4'
-          SLACK_MAX_PAPERS: '6'
+          EMAIL_MIN_SCORE: '4'
+          EMAIL_MAX_PAPERS: '6'
           OPENAI_MIN_SCORE: '4'
         run: python scripts/fetch_papers.py
 
