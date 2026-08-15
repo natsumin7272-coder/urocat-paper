@@ -1,1 +1,7 @@
-{"updated_at":"demo","papers_total":1,"new_today":1,"high_relevance_new":1}
+{
+  "updated_at": "2026-08-15T13:52:17.115935+00:00",
+  "lookback_days": 3,
+  "papers_total": 5,
+  "new_today": 4,
+  "high_relevance_new": 1
+}

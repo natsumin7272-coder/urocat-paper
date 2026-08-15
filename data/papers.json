@@ -5,22 +5,217 @@
     "japanese_title": "デモ：長期留置尿道カテーテルの閉塞と結晶性バイオフィルム",
     "abstract": "This is demonstration data only. Replace it by running the PubMed workflow.",
     "journal": "Demo Journal",
-    "authors": ["Demo Author"],
+    "authors": [
+      "Demo Author"
+    ],
     "publication_date": "2026-08-15",
-    "publication_types": ["Journal Article"],
-    "mesh": ["Urinary Catheters"],
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [
+      "Urinary Catheters"
+    ],
     "doi": "",
     "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/",
     "doi_url": "",
     "topic": "閉塞・結晶",
     "relevance_score": 5,
     "final_score": 5,
-    "relevance_reasons": ["尿道/尿路カテーテル", "blockage", "crystalline biofilm"],
-    "search_categories": ["閉塞・結晶・ストルバイト"],
+    "relevance_reasons": [
+      "尿道/尿路カテーテル",
+      "blockage",
+      "crystalline biofilm"
+    ],
+    "search_categories": [
+      "閉塞・結晶・ストルバイト"
+    ],
     "population": "デモデータ",
     "study_design": "デモ",
     "one_line_ja": "実運用ではPubMedから取得した新着論文の要点がここに表示されます。",
     "main_finding_ja": "GitHub Actionsを実行すると、このデモは実データに置き換わります。",
     "why_relevant_ja": "尿道カテーテル閉塞研究に直接関連する論文を最優先表示する設計です。"
+  },
+  {
+    "pmid": "42601721",
+    "title": "Development and validation of a scale for evaluating intermittent catheterization ability of family caregivers of patients with neurogenic bladders.",
+    "abstract": "In this study, we aimed to develop an assessment tool for the intermittent catheterization nursing ability of family caregivers of patients with neurogenic bladders and verify its psychometric characteristics. Using the Farran Comprehensive Care Skills Model as the theoretical framework and by integrating multiple methods, such as literature reviews, semi-structured interviews, group discussions, expert consultations, and pretests, an initial scale was developed. This study was a single-center, cross-sectional survey. A convenience sampling method was used to recruit 255 family caregivers of patients undergoing intermittent catheterization, and data were collected using a questionnaire. Item analysis, reliability tests, and validity tests were conducted to form a formal scale. The formal scale covered 4 dimensions: disease-related professional knowledge, intermittent catheterization care skills, symptom management ability, and psychosocial management ability, with a total of 21 items. Exploratory factor analysis revealed that the cumulative variance contribution rate of the 4 common factors of the scale was 65.879%. The confirmatory factor analysis showed that the structural validity of the scale was reasonable; the content validity index at the item level was 0.833 to 1.000, and the average content validity index at the scale level was 0.952; the Cronbach α coefficient of the total scale was 0.889, and the split-half reliability was 0.754. The assessment tool for intermittent catheterization nursing ability of family caregivers of patients with neurogenic bladders developed in this study is commendable. Based on exploratory factor analysis and confirmatory factor analysis, together with multidimensional testing, the scale has demonstrated good reliability and validity and is suitable for the clinical assessment of the catheterization nursing competency of family caregivers.",
+    "journal": "Medicine",
+    "journal_abbr": "Medicine (Baltimore)",
+    "authors": [
+      "Ting Wang",
+      "Zhaojun Zou",
+      "Kaiyan Zhu",
+      "Liping Cao"
+    ],
+    "doi": "10.1097/MD.0000000000050221",
+    "publication_date": "2026-08-15",
+    "publication_types": [
+      "Journal Article",
+      "Validation Study"
+    ],
+    "mesh": [
+      "Humans",
+      "Caregivers",
+      "Female",
+      "Male",
+      "Cross-Sectional Studies",
+      "Surveys and Questionnaires",
+      "Middle Aged",
+      "Urinary Bladder, Neurogenic",
+      "Adult",
+      "Reproducibility of Results",
+      "Psychometrics",
+      "Intermittent Urethral Catheterization",
+      "Aged"
+    ],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42601721/",
+    "doi_url": "https://doi.org/10.1097/MD.0000000000050221",
+    "search_categories": [
+      "管理・予防"
+    ],
+    "relevance_score": 3,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル",
+      "ヒト研究候補"
+    ],
+    "topic": "管理・予防",
+    "final_score": 3,
+    "fetched_at": "2026-08-15T13:52:17.115935+00:00"
+  },
+  {
+    "pmid": "42600202",
+    "title": "Prevalence of dementia and BPSD in community-dwelling older adults with advanced care needs: a nationwide survey in Taiwan.",
+    "abstract": "BACKGROUND: Caring for people with both dementia and advanced care needs is complex. This study aimed to elucidate the prevalence of dementia and behavioral and psychological symptoms of dementia (BPSD) in patients receiving advanced care, including tube feeding, respiratory care, subcutaneous injection, urinary catheter, stoma care or enema, wound care, pain care, or dialysis.\nMETHODS: This study was a nationwide, population-based, cross-sectional survey. A total of 11,297 participants were enrolled between September 2020 and June 2022 using a multistage stratified systematic sampling design. Dementia diagnosis was made by subspecialists during in-home visit or by expert consensus. The presence of BPSD and the use of specific advanced care services were collected by trained interviewers.\nRESULTS: Overall, 732 (6.5%) participants received at least one item of advanced care and 975 (8.6%) were diagnosed with dementia. Participants receiving advanced care had a higher prevalence of dementia (18.0%vs. 8.0%, p < 0.0001). Subjects receiving stoma or enema care (OR=4.92, 95% CI=2.29-10.59, p < 0.0001), tube feeding (OR=3.20, 95%CI=1.99-5.15, p < 0.0001), dialysis (OR=2.97, 95% CI=1.80-4.92, p < 0.0001), urinary catheterization or intermittent catheterization (OR=2.20, 95% CI=1.32-3.67, p = 0.003), and respiratory care (OR=2.01, 95% CI=1.14-3.57, p = 0.017) had a significantly higher risk of dementia. For BPSD, day-night confusion (42.0%vs. 27.9%, p = 0.002) and care-resistant behaviors (19.8%vs. 12.0%, p = 0.019) were significantly more prevalent in participants receiving advanced care.\nCONCLUSIONS: This study found that patients receiving advanced care had a significantly higher prevalence of dementia and BPSD in Taiwanese population. Healthcare professionals should be vigilant regarding potential comorbid dementia in patients receiving advanced care and provide more patient-centered approaches or non-pharmacological interventions to alleviate BPSD and reduce care partner's loading.",
+    "journal": "The journal of prevention of Alzheimer's disease",
+    "journal_abbr": "J Prev Alzheimers Dis",
+    "authors": [
+      "Kai-Ming Jhang",
+      "Yu-Chun Tung",
+      "Wen-Fu Wang",
+      "Hsiang-Ju Chung",
+      "Hui-Yi Liao",
+      "Ling-Chun Huang",
+      "Chih-Cheng Hsu",
+      "Yuan-Han Yang"
+    ],
+    "doi": "10.1016/j.tjpad.2026.100656",
+    "publication_date": "2026-08-14",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42600202/",
+    "doi_url": "https://doi.org/10.1016/j.tjpad.2026.100656",
+    "search_categories": [
+      "管理・予防"
+    ],
+    "relevance_score": 3,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル",
+      "ヒト研究候補"
+    ],
+    "topic": "周辺知識",
+    "final_score": 3,
+    "fetched_at": "2026-08-15T13:52:17.115935+00:00"
+  },
+  {
+    "pmid": "42594966",
+    "title": "Comparison of HoLEP Outcomes Between Catheterized and Non-Catheterized Patients: A Propensity Score-Matched Analysis.",
+    "abstract": "OBJECTIVES: To evaluate the impact of preoperative urinary retention on perioperative and early postoperative outcomes following Holmium Laser Enucleation of the Prostate (HoLEP), using a balanced comparison between catheterized and non-catheterized patients.\nMETHODS: This retrospective cohort study included patients who underwent HoLEP for benign prostatic hyperplasia at a tertiary center between January 2024 and July 2025. Patients were stratified into two groups based on the presence of acute or chronic urinary retention requiring preoperative catheterization. Propensity score matching (1:1) was performed using age, BMI, coronary artery disease, PSA, INR, platelet count, anticoagulant/antiplatelet use, and prostate volume, yielding 57 matched patients per group. Perioperative parameters, complications (Clavien-Dindo), and early functional outcomes were compared.\nRESULTS: A total of 114 matched patients were analyzed. Baseline demographic and clinical characteristics were comparable between groups. Catheterized patients demonstrated significantly longer operative (p = 0.013) and enucleation times (p = 0.012). Postoperative hematocrit decline (p = 0.016), catheterization duration (p = 0.001), and hospitalization time (p = 0.012) were all greater in catheterized patients. The overall complication rate was higher in the catheterized group (p = 0.041), although individual adverse events were infrequent. Despite these differences, one-month functional outcomes (IPSS, Qmax, PVR) were similar between groups (all p > 0.05).\nCONCLUSIONS: Preoperative urinary retention is associated with increased operative complexity and higher rate of early complications after HoLEP; however, early functional recovery remains comparable to that of non-catheterized patients. HoLEP remains an effective treatment across varying obstruction severities, though catheter-dependent patients may benefit from optimized perioperative management.",
+    "journal": "Lower urinary tract symptoms",
+    "journal_abbr": "Low Urin Tract Symptoms",
+    "authors": [
+      "Caglar Dizdaroglu",
+      "Ufuk Caglar",
+      "Arda Meric",
+      "Cagri Yaman",
+      "Faruk Ozgor",
+      "Omer Sarilar"
+    ],
+    "doi": "10.1111/luts.70089",
+    "publication_date": "2026-08-13",
+    "publication_types": [
+      "Journal Article",
+      "Comparative Study"
+    ],
+    "mesh": [
+      "Humans",
+      "Male",
+      "Prostatic Hyperplasia",
+      "Propensity Score",
+      "Retrospective Studies",
+      "Lasers, Solid-State",
+      "Aged",
+      "Urinary Retention",
+      "Urinary Catheterization",
+      "Treatment Outcome",
+      "Prostatectomy",
+      "Postoperative Complications",
+      "Middle Aged"
+    ],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42594966/",
+    "doi_url": "https://doi.org/10.1111/luts.70089",
+    "search_categories": [
+      "管理・予防",
+      "閉塞・結晶・ストルバイト"
+    ],
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル",
+      "obstruction",
+      "ヒト研究候補"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 4,
+    "fetched_at": "2026-08-15T13:52:17.115935+00:00"
+  },
+  {
+    "pmid": "42592129",
+    "title": "Development of a participatory action research-based intervention to enhance infection prevention and antimicrobial stewardship among European nursing home staff.",
+    "abstract": "INTRODUCTION: Nursing home residents frequently receive antibiotics, many of which may be unnecessary. This study aimed to develop an intervention applicable across European nursing homes to reduce antibiotic use by strengthening infection prevention and antimicrobial stewardship.\nMETHODS: The study ran January 2023 to December 2025. Using a participatory action research (PAR) approach, staff from participating nursing homes were engaged as project ambassadors and co-researchers, actively contributing to the development of the intervention. The study drew on quantitative and qualitative data and involved nursing homes in Denmark, Greece, Hungary, Lithuania, Poland, Slovakia, Slovenia and Spain.\nRESULTS: A total of 109 nursing homes participated. We identified seven key topics: hand hygiene, personal protective equipment, indwelling urinary catheters, suspicion of urinary tract infection (UTI), high staff turnover and a lack of educated staff, relatives' expectations and demands and insufficient knowledge of antibiotics. To cover these key topics, we developed 10 tools: 4 posters (hand hygiene, glove use, UTIs and basic information on viruses and bacteria); 3 leaflets (preventing UTIs, antibiotics and antimicrobial resistance and one for relatives); a hygiene quiz; a pocket card featuring a diagnostic UTI algorithm and a training programme for new staff. Educational lectures covering the seven key topics were also developed. Both the tools and the lectures were provided to the ambassadors during workshops in each country. The proportion of participating nursing homes adopting each tool ranged from 52% to 84%.\nCONCLUSIONS: The seven identified key topics are relevant to address to improve infection prevention and antimicrobial stewardship in European nursing homes.",
+    "journal": "JAC-antimicrobial resistance",
+    "journal_abbr": "JAC Antimicrob Resist",
+    "authors": [
+      "Marie Theut",
+      "Jesper Lykkegaard",
+      "Valeria Antsupova",
+      "Malene Plejdrup Hansen",
+      "Tina Marloth",
+      "Carl Llor",
+      "Ana Garcia-Sangenis",
+      "Ramon Monfà",
+      "Ana Moragas",
+      "Marilena Anastasaki",
+      "Greta Tsoulchai",
+      "Christos Lionis",
+      "Nina Sodja",
+      "Davorina Petek",
+      "Ria Benko",
+      "Andras Balint",
+      "Anna Kowalczyk",
+      "Lina Jaruseviciene",
+      "Helena Glasova",
+      "Jozef Glasa",
+      "Jette Nygaard Jensen"
+    ],
+    "doi": "10.1093/jacamr/dlag158",
+    "publication_date": "2026-08-13",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42592129/",
+    "doi_url": "https://doi.org/10.1093/jacamr/dlag158",
+    "search_categories": [
+      "新素材・コーティング",
+      "管理・予防"
+    ],
+    "relevance_score": 2,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル"
+    ],
+    "topic": "管理・予防",
+    "final_score": 2,
+    "fetched_at": "2026-08-15T13:52:17.115935+00:00"
   }
 ]
