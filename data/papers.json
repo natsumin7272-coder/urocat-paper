@@ -1,1 +1,367 @@
-[]
+[
+  {
+    "pmid": "42370677",
+    "title": "Nitric oxide-releasing balloon inflation fluid for Foley catheters to prevent catheter-associated urinary tract infections.",
+    "abstract": "UNLABELLED: Catheter-associated urinary tract infections (CAUTIs) are the most prevalent nosocomial infections. These infections impose a significant financial burden on the healthcare system and are responsible for approximately 15,000 deaths each year in the US. CAUTIs are caused by free-floating bacteria that adhere to the surface of Foley catheters and the patient's uroepithelium, forming protective biofilms that enhance bacterial survival and resistance. In this study, a nitric oxide (NO)-releasing liquid formulation is used to inflate the Foley catheter balloon, aiming to inhibit biofilm formation and reduce the risk of CAUTIs. The solution of S-nitrosoglutathione (GSNO), an endogenous NO donor molecule, was used as the catheter inflation fluid. To assess the NO-release profile, the GSNO was dissolved in various pH-adjusted (pH 6.5) aqueous media (deionized water, phosphate-buffered saline, and 2-[4-(2-hydroxyethyl)piperazine-1-yl]ethanesulfonic acid [HEPES] buffers). The GSNO/HEPES formulation sustained NO fluxes through the inflated balloon wall above 0.5 × 10⁻¹⁰ mol·min⁻¹·cm⁻² for up to 10 days, as well as significantly reduced the planktonic bacteria counts and surface colonization against Escherichia coli. The safety of the optimized GSNO formulation was evaluated in vivo in a 7-day preclinical porcine model. The formulation showed no signs of NO-related toxicity. Overall, this study presents a promising, translatable approach to substantially reducing the risk of CAUTIs in healthcare settings.\nIMPORTANCE: Catheter-associated urinary tract infections (CAUTIs) are the most frequent hospital-acquired infections and pose serious risks for patients with Foley catheters in hospitals, nursing homes, and other care facilities. These infections lead to significant mortality and healthcare expenses and are especially difficult to prevent due to bacterial biofilms on catheter surfaces. Our study introduces a novel solution, a nitric oxide (NO)-releasing balloon inflation fluid using S-nitrosoglutathione (GSNO), that continuously releases antimicrobial NO for up to 10 days. This approach significantly reduces bacterial counts and surface colonization by Escherichia coli, a main cause of CAUTIs, while demonstrating safety in preclinical animal testing. Our findings suggest that this strategy could reduce infection risk and improve outcomes for catheterized patients across diverse healthcare settings.",
+    "journal": "Microbiology spectrum",
+    "journal_abbr": "Microbiol Spectr",
+    "authors": [
+      "Ryan Kauffman",
+      "Katherine McCombs",
+      "Jianfeng Wu",
+      "Yao Lee",
+      "Ingrid L Bergin",
+      "Spencer Amacher",
+      "Chuanwu Xi",
+      "Mark E Meyerhoff",
+      "Gergely Lautner",
+      "Alvaro Rojas-Pena",
+      "Karthik Ramani",
+      "Orsolya Lautner-Csorba"
+    ],
+    "doi": "10.1128/spectrum.00818-26",
+    "publication_date": "2026-08-07",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [
+      "Urinary Tract Infections",
+      "Catheter-Related Infections",
+      "Nitric Oxide",
+      "Animals",
+      "Humans",
+      "S-Nitrosoglutathione",
+      "Biofilms",
+      "Escherichia coli",
+      "Swine",
+      "Nitric Oxide Donors",
+      "Urinary Catheterization"
+    ],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42370677/",
+    "doi_url": "https://doi.org/10.1128/spectrum.00818-26",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／biofilm・微生物",
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "biofilm",
+      "colonization",
+      "ヒト研究候補"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 4,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  },
+  {
+    "pmid": "42423721",
+    "title": "[Bacteriuria in patients with indwelling urinary catheters-when and how to treat? : Diagnosis, prevention and treatment of catheter-associated urinary tract infections].",
+    "abstract": "Catheter-associated urinary tract infection (CAUTI) represents one of the most common healthcare-associated infections. In patients with indwelling urinary catheters, bacterial colonization frequently occurs in nearly all patients and increases with the duration of catheterization. A crucial clinical challenge is the differentiation between catheter-associated asymptomatic bacteriuria (CA-ABU) and symptomatic local or systemic catheter-associated urinary tract infection (L- or S‑CAUTI). While CA-ABU in general does not require treatment, CAUTIs should be treated appropriately. The pathogenesis is largely determined by microbial biofilm formation on the catheter surface. Biofilms facilitate persistent bacterial colonization and contribute to reduced susceptibility to antimicrobial agents. The microbial spectrum commonly includes Enterobacterales such as E. coli, Klebsiella spp. and Proteus spp. as well as Enterococcus species with an increasing number of multidrug-resistant species. Major risk factors include the duration of catheterization, frequent manipulation of the drainage system, insufficient hygiene, and patient-related factors such as advanced age, comorbidities, immunosuppression, and diuresis. Prevention strategies therefore focus primarily on avoiding unnecessary catheterization, short duration of catheterization, and implementing standardized catheter care protocols. In cases of suspected CAUTI, urinalysis and urine culture should be performed, ideally after catheter replacement. Antibiotic therapy should be guided by clinical severity (local or systemic infection), local resistance patterns, and microbiological findings. Catheter removal or replacement should be considered. The overall goal is effective infection control while minimizing unnecessary antibiotic use to reduce antimicrobial resistance.",
+    "journal": "Urologie (Heidelberg, Germany)",
+    "journal_abbr": "Urologie",
+    "authors": [
+      "W Vahlensieck",
+      "W Fabry",
+      "H Piechota",
+      "K Becher",
+      "K Naber"
+    ],
+    "doi": "10.1007/s00120-026-02888-3",
+    "publication_date": "2026-07-09",
+    "publication_types": [
+      "English Abstract",
+      "Journal Article",
+      "Review"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42423721/",
+    "doi_url": "https://doi.org/10.1007/s00120-026-02888-3",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／biofilm・微生物",
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "biofilm",
+      "colonization",
+      "ヒト研究候補"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 4,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  },
+  {
+    "pmid": "42303231",
+    "title": "Drug repurposing as an approach to control biofilm formation and encrustation of urinary catheters: preclinical evidence and future challenges.",
+    "abstract": "Indwelling urethral catheters are the most widely used medical devices across the world, and catheter-associated urinary tract infections (CAUTIs) are the most common type of healthcare acquired infection. For many patients, urinary catheter blockage is a common and recurring problem, which can have considerable negative impact on patient health and well-being. Blockage primarily stems from the formation of crystalline bacterial biofilms on catheter surfaces, which can lead to upper urinary tract infection (UTI) and the onset of serious clinical complications. Potential solutions to this important clinical problem include the development of novel antibiofilm agents that can prevent formation of these communities on urinary catheters. However, traditional de novo methods of drug discovery are laborious, expensive, have long lead times and carry a high risk of failure in the clinical trial stages. One potential approach to mitigate this risk and cost, is the evaluation of pre-existing licensed drugs for those with useful antibiofilm or antimicrobial activity. Here we review current preclinical evidence for antibiofilm and antimicrobial activities in licensed drugs from a range of classes, such as urease inhibitors, Selective Serotonin Reuptake Inhibitors (SSRIs), phenothiazines, oncology therapeutics and non-steroidal anti-inflammatory drugs (NSAIDs). In doing so, we consider the application of the repurposing approach to control CAUTI and catheter blockage, and identify key challenges and opportunities related to delivery of repurposed drugs to the catheterised urinary tract.",
+    "journal": "Journal of applied microbiology",
+    "journal_abbr": "J Appl Microbiol",
+    "authors": [
+      "Anthony J Slate",
+      "Catherine R E Lawler",
+      "Ocean E Clarke",
+      "Brian V Jones"
+    ],
+    "doi": "10.1093/jambio/lxag139",
+    "publication_date": "2026-07-08",
+    "publication_types": [
+      "Journal Article",
+      "Review"
+    ],
+    "mesh": [
+      "Biofilms",
+      "Drug Repositioning",
+      "Urinary Catheters",
+      "Humans",
+      "Catheter-Related Infections",
+      "Urinary Tract Infections",
+      "Anti-Bacterial Agents"
+    ],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42303231/",
+    "doi_url": "https://doi.org/10.1093/jambio/lxag139",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "新素材・コーティング",
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／閉塞・結晶",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "blockage",
+      "encrustation",
+      "urease",
+      "catheter blockage",
+      "crystal",
+      "biofilm",
+      "antibiofilm"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  },
+  {
+    "pmid": "42397613",
+    "title": "From adhesion to gene regulation: tea tree essential oil suppresses Uropathogenic Escherichia coli colonization while triggering csgA-mediated biofilm stress paradox.",
+    "abstract": "BACKGROUND AND OBJECTIVES: Uropathogenic E.coli (UPEC) are major causative agents of urinary tract infection (UTIs), they often possess strong biofilm-forming abilities, and capable of resisting many antibiotics, making catheter associated UTIs (CAUTIs) difficult to treat. Essential oils such as tea tree oil (TTO) have emerged as natural alternatives to antibiotics. This study aimed to evaluate the antibacterial, adhesion, and biofilm-forming efficacy of TTO against UPEC, while analyzing its effect on the gene expression of csgA gene and determining its cytotoxicity.\nMETHODS: Four UPEC isolates collected from different UTIs patients from Baghdad Province. The Antibacterial activity of TTO evaluated using agar wells diffusion assay and micro dilution using resazurin. Anti-adhesion and anti-biofilm were assessed using silicon Foley catheters. The csgA encode to curli fibers determined using polymerase chain reaction (PCR) and gene expression measured using qPCR. Cytotoxicity of TTO measured against renal carcinoma (A498) and normal fibroblast (HdFn) cell lines via MTT assay.\nRESULTS: TTO inhibited UPEC with inhibition zone diameter of 12-25 mm (p < 0.0001) and MIC value was 0.25%. In Foley catheter model, the concentrated TTO reduced adhesion and biofilm formation (p < 0.0001). csgA harbored within all subjected isolates. Real time quantitative PCR (RT-qPCR) revealed significant (p < 0.0001) upregulation within susceptible isolates (2.2) fold change. Cytotoxicity via MTT assay reveled selective activity of TTO on (A498, IC50= 265.8 µg/mL) over (HdFn, IC50 = 852.5 µg/mL; p < 0.0001).\nCONCLUSION: TTO demonstrated potential antibacterial, anti-adhesion and anti-biofilm activity against UPEC along with modulations of csgA gene expression and selective cytotoxicity.",
+    "journal": "Molecular biology reports",
+    "journal_abbr": "Mol Biol Rep",
+    "authors": [
+      "Omar Sinan Sadiq Hussain Al-Zaidi",
+      "Luma Abdulhady Zwain",
+      "Estabraq A Mahmoud"
+    ],
+    "doi": "10.1007/s11033-026-12265-0",
+    "publication_date": "2026-07-03",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [
+      "Biofilms",
+      "Uropathogenic Escherichia coli",
+      "Humans",
+      "Tea Tree Oil",
+      "Bacterial Adhesion",
+      "Anti-Bacterial Agents",
+      "Microbial Sensitivity Tests",
+      "Urinary Tract Infections",
+      "Escherichia coli Proteins",
+      "Gene Expression Regulation, Bacterial",
+      "Escherichia coli Infections",
+      "Oils, Volatile"
+    ],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42397613/",
+    "doi_url": "https://doi.org/10.1007/s11033-026-12265-0",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で留置カテーテル×研究主題／biofilm・微生物",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "biofilm",
+      "colonization",
+      "anti-biofilm",
+      "ヒト研究候補"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 5,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  },
+  {
+    "pmid": "42367566",
+    "title": "Spontaneous Closure of a Post-biopsy Rectoprostatic Fistula via Dual Urinary Diversion: A Case Report and Review of Conservative Management.",
+    "abstract": "Rectoprostatic fistula (RPF) is an exceedingly rare but severe complication of transrectal ultrasound (TRUS)-guided prostate biopsy. It typically represents the terminal stage of a post-biopsy prostatic abscess that perforates the Denonvilliers' fascia. We present a case of RPF successfully managed through a conservative \"urinary-first\" strategy. A 70-year-old male with type 2 diabetes mellitus and a glycated hemoglobin level of 8% presented eight weeks following a TRUS-guided biopsy with pathognomonic symptoms of fecaluria, pneumaturia, and urine passage per rectum. The patient had a history of recurrent Enterococcus faecalis urinary tract infections post-procedure. Digital rectal examination and multi-modal imaging (voiding cystourethrography, cystoscopy, and MRI) confirmed a Rivera class II rectourethral communication. Initial management with a transurethral Foley catheter was complicated by recurrent obstructions. A transition to a \"dual-drainage\" strategy, utilizing both a urethral catheter and a suprapubic tube (SPT), was implemented to ensure superior anatomical rest. After four weeks of diversion, follow-up cystoscopy and sigmoidoscopy confirmed complete spontaneous closure of the fistula. In high-risk patients, particularly those with diabetes, persistent post-biopsy symptoms should prompt immediate investigation for a prostatic abscess to prevent fistulization. This case highlights that a conservative approach using dual urinary drainage (SPT and Foley) can effectively facilitate secondary intention healing, potentially sparing patients from the morbidity of major reconstructive surgery.",
+    "journal": "Cureus",
+    "journal_abbr": "Cureus",
+    "authors": [
+      "Ali Akjay",
+      "Najwa Jmil",
+      "Mourad Akdad",
+      "Jihad El Anzaoui"
+    ],
+    "doi": "10.7759/cureus.109821",
+    "publication_date": "2026-06-29",
+    "publication_types": [
+      "Case Reports",
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42367566/",
+    "doi_url": "https://doi.org/10.7759/cureus.109821",
+    "search_categories": [
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で留置カテーテル×研究主題／閉塞・結晶",
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "obstruction",
+      "ヒト研究候補"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 4,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  },
+  {
+    "pmid": "42357384",
+    "title": "Sub-Minimum Inhibitory Concentrations of Amoxicillin Modulate Biofilm Formation and the Expression of Biofilm-Associated Genes in Enterococcus faecalis.",
+    "abstract": "Background:Enterococcus faecalis is one of the most frequent causes of catheter-associated urinary tract infections, largely due to its ability to form biofilms on indwelling urinary catheter surfaces, which enhance bacterial persistence and antimicrobial tolerance. Sub-minimum inhibitory concentrations (sub-MICs) of antimicrobials frequently occur in clinical settings, and growing evidence suggests that such suboptimal exposures can induce bacterial biofilm formation. We hypothesized that exposure to sub-MICs of amoxicillin, ciprofloxacin, and nitrofurantoin, antimicrobials commonly employed in the treatment of urinary tract infections, would enhance the biofilm-forming capacity of E. faecalis strains. Objective: To investigate the effects of sub-MICs of amoxicillin, ciprofloxacin, and nitrofurantoin on biofilm formation and biofilm-associated gene expression. The study focused on key biofilm-related genes, including those encoding aggregation substance protein (asa1), collagen adhesin (ace), E. faecalis surface protein (esp), gelatinase (gelE), cytolysin activator A (cylA), endocarditis antigen A (efaA), and the endocarditis- and biofilm-associated pili subunit A (ebpA) in E. faecalis. Methods: Two strains, E. faecalis ATCC 29212 and strain 54, were exposed to 1/8× and 1/4× MIC of amoxicillin, ciprofloxacin, and nitrofurantoin in either artificial urine medium (AUM) or tryptone soya broth (TSB). Bacterial growth kinetics were monitored by optical density measurements, while biofilm formation was quantified using a microtiter plate biofilm assay. The expression of biofilm-associated genes was analyzed using quantitative reverse transcription PCR (RT-qPCR) at 24 and 48 h following exposure to sub-MICs of amoxicillin under flow conditions mimicking the urinary tract milieu. Results: Exposure to sub-MICs of the three antimicrobials did not significantly affect bacterial growth in either strain or culture medium. Sub-MICs of amoxicillin significantly enhanced biofilm formation, with the most pronounced effect observed at 1/4× MIC in both AUM and TSB. In contrast, ciprofloxacin and nitrofurantoin exerted inhibitory effects on biofilm formation across both media. Gene expression analysis demonstrated time- and strain-dependent responses to amoxicillin exposure. E. faecalis ATCC 29212 exhibited a moderate, coordinated upregulation of adhesion- and biofilm-associated genes, particularly at 48 h. By comparison, E. faecalis strain 54 showed a stronger and more dynamic transcriptional response, characterized by early and sustained induction of key biofilm-related genes, including esp and gelE, as well as a pronounced late upregulation of ebpA. Conclusions: These findings emphasize the importance of maintaining therapeutically effective antimicrobial concentrations, as sub-inhibitory amoxicillin exposure may promote biofilm-associated persistence and potentially compromise treatment efficacy.",
+    "journal": "Molecules (Basel, Switzerland)",
+    "journal_abbr": "Molecules",
+    "authors": [
+      "Desiye T Tegegne",
+      "Sylwia Banaszkiewicz",
+      "Jacek Bania",
+      "Błażej Poźniak"
+    ],
+    "doi": "10.3390/molecules31121986",
+    "publication_date": "2026-06-27",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [
+      "Enterococcus faecalis",
+      "Biofilms",
+      "Amoxicillin",
+      "Gene Expression Regulation, Bacterial",
+      "Microbial Sensitivity Tests",
+      "Anti-Bacterial Agents",
+      "Ciprofloxacin",
+      "Nitrofurantoin",
+      "Bacterial Proteins",
+      "Humans"
+    ],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42357384/",
+    "doi_url": "https://doi.org/10.3390/molecules31121986",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で留置カテーテル×研究主題／biofilm・微生物",
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "biofilm",
+      "ヒト研究候補"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 4,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  },
+  {
+    "pmid": "42353698",
+    "title": "A Comprehensive In Vitro Assessment of Broad-Spectrum Antimicrobial Efficacy of Organo-Selenium-Incorporated Urinary Catheter in Comparison to a Zwitterionic Surface Catheter.",
+    "abstract": "Background/Objectives: Catheter-associated urinary tract infections (CAUTIs) are one of the most common healthcare-related morbidities. Also, severe clinical outcomes derived from CAUTIs demand an urgent need for the development of novel antimicrobial catheter materials. Since CAUTIs are primarily driven by a wide range of microorganisms causing biofilm formation on the surfaces of catheters, evaluating the effectiveness of innovative antimicrobial materials against a broad spectrum of known uropathogens is warranted. We aim (1) to demonstrate the ability of incorporated organo-selenium versus that of an FDA-cleared antimicrobial catheter and (2) to show that the results of the study are consistent against the most common microorganisms causing urinary tract infections in humans. Methods: Based on encouraging preliminary studies, three percent of organo-selenium (weight-based), as a novel antimicrobial catheter material, was incorporated into thermoplastic polyurethane (TPU). This was compared in vitro with plain polyurethane catheters and the SILQ ClearTract catheter with a zwitterionic coating (FDA-cleared for its antimicrobial properties in December 2022). The antimicrobial activity was studied against Candida albicans, Escherichia coli, Klebsiella pneumoniae, Proteus mirabilis, Pseudomonas aeruginosa, Staphylococcus aureus, MRSA, and Staphylococcus epidermidis by assessment of colony-forming unit counts along with visual confirmation using Scanning Electron Microscopy (SEM). Results: Plain polyurethane catheters (control group) showed 7- to 8-log of in vitro growth for all tested microbes, whereas the antimicrobial zwitterionic SILQ ClearTract catheters still showed 6- to 7-log of microbial growth. In contrast, organo-selenium-incorporated catheters demonstrated no detectable in vitro growth for all tested microbes (C. albicans, E. coli, K. pneumoniae, P. mirabilis, P. aeruginosa, S. aureus, MRSA, and S. epidermidis). SEM analysis also validated the findings. Conclusions: Potentially non-leaching organo-selenium, as a novel urinary catheter material, significantly inhibited microbial attachment, growth, and biofilm formation across a wide spectrum of common uropathogenic organisms compared to a zwitterionic catheter, providing a strong foundation for further detailed in vivo and clinical studies.",
+    "journal": "Antibiotics (Basel, Switzerland)",
+    "journal_abbr": "Antibiotics (Basel)",
+    "authors": [
+      "Harry May",
+      "Md Abid Afridi",
+      "Phat L Tran",
+      "Hannah Seo",
+      "Eric Tran",
+      "Wei Li",
+      "Ted W Reid",
+      "Werner T W de Riese"
+    ],
+    "doi": "10.3390/antibiotics15060574",
+    "publication_date": "2026-06-26",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42353698/",
+    "doi_url": "https://doi.org/10.3390/antibiotics15060574",
+    "search_categories": [
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で尿道カテーテル×抗菌材料／材料・技術",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル技術",
+      "proteus mirabilis",
+      "biofilm",
+      "coating"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 5,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  },
+  {
+    "pmid": "42156586",
+    "title": "Surface modification of urinary catheters with antibiofilm nanocoating: curcumin modified silver nanoparticles against Proteus mirabilis.",
+    "abstract": "Proteus mirabilis is a Gram-negative, uropathogenic bacterium with high virulence due to its crystalline biofilm-forming ability, urease production, and antibiotic resistance. Nanotechnology has emerged as a promising field to address such challenges, offering innovative solutions to combat bacterial virulence and antibiotic resistance. This study aimed to develop a urinary catheter surface coated with curcumin-modified silver nanoparticles (Curcumin-AgNPs) to reduce crystalline biofilm formation by P.mirabilis. The coating was assessed using Fourier-transform infrared spectroscopy (FTIR), atomic force microscopy(AFM), scanning electron microscopy-energy-dispersive X-ray analysis(SEM-EDX), and contact angle assays. The antimicrobial efficacy was examined by direct contact assay, serial plate transfer test (SPTT), and time kill assay. Coated catheters were experimented with using an in vitro bladder model over 2, 7, and 14 days, and at the point of catheter blockage. Antibiofilm efficacy was examined using tetrazolium salt 3-[4,5-dimethylthiazol-2-yl]-2,5-diphenyltetrazolium bromide (MTT), crystal violet(CV) assays, SEM-EDX, and atomic absorption spectroscopy(AAS) analysis. P-values < 0.05 were considered statistically significant. FTIR, AFM, SEM, and EDX analyses confirmed the successful coating of the Foley catheter with curcumin-AgNPs. A contact angle measurement of 120.11° demonstrated the hydrophobic nature of the coated catheter. The direct contact assay revealed inhibition zones for coated catheters (11.85 ± 1.86 mm). The coating demonstrated strong antibiofilm activity, with 70 - 80% biomass reduction and 60-80% metabolic inhibition even at the point of catheter blockage. AAS, SEM-EDX analysis showed reduced Ca²⁺ and Mg²⁺ deposition in coated catheters. The findings indicate that curcumin-AgNPs coatings markedly improve the antibacterial and antibiofilm efficacy of urinary catheters, successfully inhibiting crystalline biofilm formation.",
+    "journal": "Journal of materials science. Materials in medicine",
+    "journal_abbr": "J Mater Sci Mater Med",
+    "authors": [
+      "N M C Nissanka",
+      "K A A Dilhari",
+      "G Priyadarshana",
+      "J A Munasinghe",
+      "M Dilshani",
+      "M M Weerasekera"
+    ],
+    "doi": "10.1007/s10856-026-07066-7",
+    "publication_date": "2026-05-20",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42156586/",
+    "doi_url": "https://doi.org/10.1007/s10856-026-07066-7",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "新素材・コーティング",
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／閉塞・結晶",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "blockage",
+      "crystalline biofilm",
+      "urease",
+      "proteus mirabilis",
+      "catheter blockage",
+      "crystal",
+      "biofilm"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-08-15T14:36:26.379216+00:00"
+  }
+]

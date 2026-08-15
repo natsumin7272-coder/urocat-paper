@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-15T14:29:18.893207+00:00",
-  "lookback_days": 3,
-  "papers_total": 0,
-  "new_today": 0,
-  "high_relevance_new": 0,
-  "excluded_this_run": 0
+  "updated_at": "2026-08-15T14:36:26.379216+00:00",
+  "lookback_days": 90,
+  "papers_total": 8,
+  "new_today": 8,
+  "high_relevance_new": 8,
+  "excluded_this_run": 27
 }
