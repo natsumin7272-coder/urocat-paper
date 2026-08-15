@@ -7,69 +7,6 @@
 貼り付けたマークダウン（1）(8).md
 ファイル
 
-では、Gmail対応版に進めます。現在のコードでは Slack 通知が send_slack() として独立しているので、PubMed検索・対象論文の厳格判定・★評価・AI要約部分は維持し、通知だけGmailへ置換できます。
-
-すでに登録した3つのSecrets、
-
-GMAIL_ADDRESS
-GMAIL_APP_PASSWORD
-GMAIL_TO
-
-を使う形にします。
-
-メール本文は、たとえば次のようにします。
-
-📚 UroCat Paper｜本日の重要新着論文 2報
-
-
-━━━━━━━━━━━━━━━━━━
-★★★★★　閉塞・結晶
-━━━━━━━━━━━━━━━━━━
-
-
-Nitric oxide-releasing balloon inflation fluid for Foley catheters...
-
-
-【日本語タイトル】
-フォーリーカテーテルのための一酸化窒素放出型バルーン充填液...
-
-
-【何を調べた？】
-……
-
-
-【対象】
-……
-
-
-【研究デザイン】
-……
-
-
-【主な結果】
-……
-
-
-【あなたの研究になぜ重要？】
-……
-
-
-Journal: Microbiology Spectrum
-PMID: 42370677
-
-
-PubMedで読む
-UroCat Paperで確認
-
-そして動作は、毎朝PubMed検索 → 厳格な対象判定 → ★評価 → ★4–5のみAI要約 → UroCat Paper更新 → 新規★4–5があればGmail送信、0報なら送信なし、という流れにします。現在のAI enrichmentも★4以上を対象にする設定なので、その設計をそのまま利用できます。
-
-一点だけ重要です。今のコードには SLACK_MIN_SCORE などSlack用設定が残っているため、単にメール送信関数を追加するだけでなく、Slack関連をきれいに除去した完成版へ丸ごと置換します。
-
-次の画面は GitHub → scripts/fetch_papers.py → 鉛筆マーク ✏️ を開いてください。
-開いたら、そこに貼る完成版コードを丸ごと出します。
-
-うん！
-
 はい。では scripts/fetch_papers.py の編集画面を開いて、今あるコードを全部選択（Ctrl+A）して削除してください。
 
 そのあと、こちらで出す Gmail対応の完成版コードを丸ごと貼り付ける形にします。
@@ -104,6 +41,41 @@ Replace Slack notification with Gmail
 この版では、新規論文のうち★4以上だけをGmailへ送り、該当論文が0報ならメールを送りません。メールには英語タイトル、日本語タイトル、対象、研究デザイン、主結果、研究との関連性、Journal、PMID、PubMed/DOI、UroCat Paperへのボタンを入れています。
 
 貼り付けてCommitできたら教えてください。次に daily.yml にGmailの3つのSecretを接続する修正をします。
+
+fetch_papers_gmail.py
+コード
+
+あ、これはダメです。貼り付ける内容を間違えています。
+スクショを見ると、fetch_papers.py の1行目から「できればこのスクショのような内容で…」など、私たちの会話文までコードとして入っています。このままだとPythonは動きません。
+
+先ほど私が渡したファイル自体を開くのではなく、別の内容をコピーしてしまったようです。
+
+いま直す方法
+
+まず、まだこの画面では鉛筆ボタンを押さず、下のファイルをもう一度ダウンロードしてください。
+
+正しい fetch_papers_gmail.py をダウンロード
+
+ダウンロードしたら、
+
+fetch_papers_gmail.py を右クリック
+プログラムから開く → メモ帳
+メモ帳で Ctrl+A → Ctrl+C
+GitHubの scripts/fetch_papers.py で鉛筆 ✏️ を押す
+GitHubの編集欄で Ctrl+A → Delete
+Ctrl+V
+一番上を確認
+
+ここが重要です。貼り付け後の1行目付近が日本語の会話文になっていたらCommitしないでください。
+
+今回スクショにある
+
+できればこのスクショのような内容で…
+
+は絶対に入ってはいけません。
+
+正しく貼れたら、一番上の10行くらいが見えるスクショを送ってください。
+今回はCommitする前に私が確認します。
 
 fetch_papers_gmail.py
 コード
