@@ -1,1 +1,53 @@
-
+[
+  {
+    "pmid": "42592129",
+    "title": "Development of a participatory action research-based intervention to enhance infection prevention and antimicrobial stewardship among European nursing home staff.",
+    "abstract": "INTRODUCTION: Nursing home residents frequently receive antibiotics, many of which may be unnecessary. This study aimed to develop an intervention applicable across European nursing homes to reduce antibiotic use by strengthening infection prevention and antimicrobial stewardship.\nMETHODS: The study ran January 2023 to December 2025. Using a participatory action research (PAR) approach, staff from participating nursing homes were engaged as project ambassadors and co-researchers, actively contributing to the development of the intervention. The study drew on quantitative and qualitative data and involved nursing homes in Denmark, Greece, Hungary, Lithuania, Poland, Slovakia, Slovenia and Spain.\nRESULTS: A total of 109 nursing homes participated. We identified seven key topics: hand hygiene, personal protective equipment, indwelling urinary catheters, suspicion of urinary tract infection (UTI), high staff turnover and a lack of educated staff, relatives' expectations and demands and insufficient knowledge of antibiotics. To cover these key topics, we developed 10 tools: 4 posters (hand hygiene, glove use, UTIs and basic information on viruses and bacteria); 3 leaflets (preventing UTIs, antibiotics and antimicrobial resistance and one for relatives); a hygiene quiz; a pocket card featuring a diagnostic UTI algorithm and a training programme for new staff. Educational lectures covering the seven key topics were also developed. Both the tools and the lectures were provided to the ambassadors during workshops in each country. The proportion of participating nursing homes adopting each tool ranged from 52% to 84%.\nCONCLUSIONS: The seven identified key topics are relevant to address to improve infection prevention and antimicrobial stewardship in European nursing homes.",
+    "journal": "JAC-antimicrobial resistance",
+    "journal_abbr": "JAC Antimicrob Resist",
+    "authors": [
+      "Marie Theut",
+      "Jesper Lykkegaard",
+      "Valeria Antsupova",
+      "Malene Plejdrup Hansen",
+      "Tina Marloth",
+      "Carl Llor",
+      "Ana Garcia-Sangenis",
+      "Ramon Monfà",
+      "Ana Moragas",
+      "Marilena Anastasaki",
+      "Greta Tsoulchai",
+      "Christos Lionis",
+      "Nina Sodja",
+      "Davorina Petek",
+      "Ria Benko",
+      "Andras Balint",
+      "Anna Kowalczyk",
+      "Lina Jaruseviciene",
+      "Helena Glasova",
+      "Jozef Glasa",
+      "Jette Nygaard Jensen"
+    ],
+    "doi": "10.1093/jacamr/dlag158",
+    "publication_date": "2026-08-13",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42592129/",
+    "doi_url": "https://doi.org/10.1093/jacamr/dlag158",
+    "search_categories": [
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "尿道/尿路カテーテル技術",
+    "relevance_score": 1,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "一般感染対策寄り"
+    ],
+    "topic": "管理・予防",
+    "final_score": 1,
+    "fetched_at": "2026-08-15T14:19:51.996153+00:00"
+  }
+]
