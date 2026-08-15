@@ -32,7 +32,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.6' }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          LOOKBACK_DAYS: '90'
+          LOOKBACK_DAYS: '3'
           SLACK_MIN_SCORE: '4'
           SLACK_MAX_PAPERS: '6'
           OPENAI_MIN_SCORE: '4'
