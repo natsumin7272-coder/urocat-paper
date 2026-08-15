@@ -1,0 +1,12 @@
+{
+  "name": "UroCat Paper",
+  "short_name": "UroCat",
+  "description": "尿道留置カテーテル研究のPubMed新着論文アプリ",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f7fa",
+  "theme_color": "#102a43",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

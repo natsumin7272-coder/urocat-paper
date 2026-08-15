@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#102a43" />
+  <meta name="description" content="尿道留置カテーテル研究のためのPubMed新着論文アプリ" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>UroCat Paper</title>
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">PERSONAL RESEARCH FEED</div>
+      <h1>UroCat Paper</h1>
+      <p>尿道留置カテーテル研究の新着論文を、重要度順に毎日読む。</p>
+    </div>
+    <button id="installBtn" class="ghost" hidden>ホーム画面に追加</button>
+  </header>
+
+  <main>
+    <section class="hero card">
+      <div>
+        <div class="today-label">今日のフィード</div>
+        <div class="hero-number"><span id="highCount">–</span><small> 報</small></div>
+        <p>★★★★★〜★★★★☆の重要論文</p>
+      </div>
+      <div class="hero-meta">
+        <div><span>最終更新</span><strong id="updatedAt">–</strong></div>
+        <div><span>保存論文</span><strong id="totalCount">–</strong></div>
+      </div>
+    </section>
+
+    <section class="controls card">
+      <div class="search-wrap">
+        <input id="q" type="search" placeholder="タイトル・Abstract・キーワードを検索" autocomplete="off" />
+      </div>
+      <div id="topicChips" class="chips"></div>
+      <div class="row">
+        <select id="scoreFilter" aria-label="関連度">
+          <option value="1">★1以上</option>
+          <option value="3">★3以上</option>
+          <option value="4" selected>★4以上</option>
+          <option value="5">★5のみ</option>
+        </select>
+        <select id="readFilter" aria-label="既読">
+          <option value="all">すべて</option>
+          <option value="unread">未読</option>
+          <option value="favorite">お気に入り</option>
+          <option value="relevant">関連あり</option>
+        </select>
+        <button id="resetBtn" class="ghost">リセット</button>
+      </div>
+    </section>
+
+    <section class="section-head">
+      <div>
+        <h2>論文</h2>
+        <p id="resultCount">読み込み中…</p>
+      </div>
+      <button id="exportBtn" class="ghost">フィードバックを書き出す</button>
+    </section>
+
+    <section id="papers" class="paper-list" aria-live="polite"></section>
+  </main>
+
+  <dialog id="paperDialog">
+    <article class="dialog-card">
+      <button id="closeDialog" class="close" aria-label="閉じる">×</button>
+      <div id="dialogBody"></div>
+    </article>
+  </dialog>
+
+  <template id="paperTemplate">
+    <article class="paper card">
+      <div class="paper-top">
+        <div class="badges"></div>
+        <time></time>
+      </div>
+      <h3 class="title"></h3>
+      <div class="ja-title"></div>
+      <div class="meta"></div>
+      <p class="summary"></p>
+      <div class="paper-actions">
+        <button class="open primary">要約・Abstract</button>
+        <a class="pubmed" target="_blank" rel="noopener">PubMed</a>
+        <button class="feedback relevant" title="関連あり">👍</button>
+        <button class="feedback irrelevant" title="関連なし">👎</button>
+        <button class="favorite" title="お気に入り">☆</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

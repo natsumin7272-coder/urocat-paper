@@ -1,0 +1,26 @@
+[
+  {
+    "pmid": "DEMO001",
+    "title": "Example: Long-term indwelling urinary catheter blockage and crystalline biofilm",
+    "japanese_title": "デモ：長期留置尿道カテーテルの閉塞と結晶性バイオフィルム",
+    "abstract": "This is demonstration data only. Replace it by running the PubMed workflow.",
+    "journal": "Demo Journal",
+    "authors": ["Demo Author"],
+    "publication_date": "2026-08-15",
+    "publication_types": ["Journal Article"],
+    "mesh": ["Urinary Catheters"],
+    "doi": "",
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/",
+    "doi_url": "",
+    "topic": "閉塞・結晶",
+    "relevance_score": 5,
+    "final_score": 5,
+    "relevance_reasons": ["尿道/尿路カテーテル", "blockage", "crystalline biofilm"],
+    "search_categories": ["閉塞・結晶・ストルバイト"],
+    "population": "デモデータ",
+    "study_design": "デモ",
+    "one_line_ja": "実運用ではPubMedから取得した新着論文の要点がここに表示されます。",
+    "main_finding_ja": "GitHub Actionsを実行すると、このデモは実データに置き換わります。",
+    "why_relevant_ja": "尿道カテーテル閉塞研究に直接関連する論文を最優先表示する設計です。"
+  }
+]
