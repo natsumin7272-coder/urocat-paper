@@ -1,5 +1,54 @@
 [
   {
+    "pmid": "42606318",
+    "title": "Prevalence and Characteristics of Urinary Catheter Blockage in Patients With Long-Term Urinary Catheterization: A Cross-Sectional Study.",
+    "abstract": "AIMS: To determine the prevalence and characteristics of urinary catheter blockage in older patients using objective indicators and to characterize obstructive materials and microbiota.\nDESIGN: A cross-sectional study.\nMETHODS: Patients aged ≥ 65 years with an indwelling catheter for ≥ 24 h were recruited from a long-term care hospital. Blockage was defined using objective indicators including residual urine volume, leakage, reinsertion urine volume and resistance to saline injection. Samples were analysed for composition and microbiota.\nRESULTS: Among 77 patients, 29.9% experienced catheter blockage. Blockage was associated with shorter catheterization duration and greater intraluminal narrowing. Proteus mirabilis and Campylobacter ureolyticus were more abundant. Most blockages occurred at the catheter tip (81.0%), with struvite as the predominant material (71.4%). Microbiota varied by material composition.\nCONCLUSION: Catheter blockage occurred in 29.9% of patients, mainly at the catheter tip and associated with struvite. Microbiota differed by blockage status and material composition.\nIMPLICATIONS FOR THE PROFESSION AND/OR PATIENT CARE: Objective identification of catheter blockage supports early detection and targeted management and provides a basis for research on mechanisms. These findings provide a foundation for future research to develop and evaluate evidence-based nursing interventions for preventing catheter blockage in older adults.\nIMPACT: This study addressed the lack of objective criteria and limited understanding of catheter blockage. It showed that about 30% of patients experienced blockage and identified distinct microbiota and material characteristics. These findings may improve catheter management and support future research on mechanisms and prevention.\nREPORTING METHOD: STROBE checklist.\nPATIENT OR PUBLIC CONTRIBUTION: Patients contributed to data collection by providing information on symptoms related to catheter blockage through structured assessments, while nurses during the study period facilitated data collection and conducted clinical assessments.",
+    "journal": "Journal of clinical nursing",
+    "journal_abbr": "J Clin Nurs",
+    "authors": [
+      "Natsumi Hirose",
+      "Mao Kunimitsu",
+      "Chihiro Takizawa",
+      "Yukie Kataoka",
+      "Minami Shinkawa",
+      "Chika Takada",
+      "Atsuo Kawamoto",
+      "Jun Kamei",
+      "Haruki Kume",
+      "Chizuko Konya",
+      "Hiromi Sanada",
+      "Gojiro Nakagami"
+    ],
+    "doi": "10.1111/jocn.70513",
+    "publication_date": "2026-08-17",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42606318/",
+    "doi_url": "https://doi.org/10.1111/jocn.70513",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "長期管理・閉塞予防",
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／閉塞・結晶",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "blockage",
+      "struvite",
+      "proteus mirabilis",
+      "catheter blockage",
+      "microbiota",
+      "ヒト研究候補"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-08-17T22:55:48.418733+00:00"
+  },
+  {
     "pmid": "42370677",
     "title": "Nitric oxide-releasing balloon inflation fluid for Foley catheters to prevent catheter-associated urinary tract infections.",
     "abstract": "UNLABELLED: Catheter-associated urinary tract infections (CAUTIs) are the most prevalent nosocomial infections. These infections impose a significant financial burden on the healthcare system and are responsible for approximately 15,000 deaths each year in the US. CAUTIs are caused by free-floating bacteria that adhere to the surface of Foley catheters and the patient's uroepithelium, forming protective biofilms that enhance bacterial survival and resistance. In this study, a nitric oxide (NO)-releasing liquid formulation is used to inflate the Foley catheter balloon, aiming to inhibit biofilm formation and reduce the risk of CAUTIs. The solution of S-nitrosoglutathione (GSNO), an endogenous NO donor molecule, was used as the catheter inflation fluid. To assess the NO-release profile, the GSNO was dissolved in various pH-adjusted (pH 6.5) aqueous media (deionized water, phosphate-buffered saline, and 2-[4-(2-hydroxyethyl)piperazine-1-yl]ethanesulfonic acid [HEPES] buffers). The GSNO/HEPES formulation sustained NO fluxes through the inflated balloon wall above 0.5 × 10⁻¹⁰ mol·min⁻¹·cm⁻² for up to 10 days, as well as significantly reduced the planktonic bacteria counts and surface colonization against Escherichia coli. The safety of the optimized GSNO formulation was evaluated in vivo in a 7-day preclinical porcine model. The formulation showed no signs of NO-related toxicity. Overall, this study presents a promising, translatable approach to substantially reducing the risk of CAUTIs in healthcare settings.\nIMPORTANCE: Catheter-associated urinary tract infections (CAUTIs) are the most frequent hospital-acquired infections and pose serious risks for patients with Foley catheters in hospitals, nursing homes, and other care facilities. These infections lead to significant mortality and healthcare expenses and are especially difficult to prevent due to bacterial biofilms on catheter surfaces. Our study introduces a novel solution, a nitric oxide (NO)-releasing balloon inflation fluid using S-nitrosoglutathione (GSNO), that continuously releases antimicrobial NO for up to 10 days. This approach significantly reduces bacterial counts and surface colonization by Escherichia coli, a main cause of CAUTIs, while demonstrating safety in preclinical animal testing. Our findings suggest that this strategy could reduce infection risk and improve outcomes for catheterized patients across diverse healthcare settings.",
