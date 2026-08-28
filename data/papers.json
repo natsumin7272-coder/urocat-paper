@@ -1,5 +1,41 @@
 [
   {
+    "pmid": "42659769",
+    "title": "A tale of two catheters: STEMI in a patient presenting with acute urinary retention.",
+    "abstract": "ST-segment elevation myocardial infarction (STEMI) classically presents with chest pain, yet 10-13% of patients present without it, leading to delayed diagnosis and worse outcomes. We report a 59-year-old man with prostate cancer who presented to the emergency department (ED) via emergency medical services (EMS) with acute penile and suprapubic pain from urinary retention. He denied chest pain, dyspnea, and other cardiac symptoms throughout his encounter. A prehospital 12‑lead electrocardiogram (ECG) revealed ST-segment elevations in leads II, III, and aVF, prompting a STEMI alert. In the ED, bladder ultrasonography confirmed distention, and Foley catheter placement resolved his obstruction and pain. Despite complete symptom resolution, persistent ST elevation prompted emergent catheterization, which revealed 100% occlusion of the right coronary artery (RCA). This case illustrates painless STEMI, the diagnostic value of prehospital ECG in patients with non-cardiac complaints, and the principle that persistent objective evidence of ischemia must not be dismissed when an alternative pain source is treated.",
+    "journal": "The American journal of emergency medicine",
+    "journal_abbr": "Am J Emerg Med",
+    "authors": [
+      "Michael Carter",
+      "Mahmoud Morsy",
+      "Brit Long"
+    ],
+    "doi": "10.1016/j.ajem.2026.08.025",
+    "publication_date": "2026-08-28",
+    "publication_types": [
+      "Case Reports",
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42659769/",
+    "doi_url": "https://doi.org/10.1016/j.ajem.2026.08.025",
+    "search_categories": [
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で留置カテーテル×研究主題／閉塞・結晶",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "obstruction",
+      "occlusion",
+      "ヒト研究候補"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-08-28T22:08:44.627206+00:00"
+  },
+  {
     "pmid": "42606318",
     "title": "Prevalence and Characteristics of Urinary Catheter Blockage in Patients With Long-Term Urinary Catheterization: A Cross-Sectional Study.",
     "abstract": "AIMS: To determine the prevalence and characteristics of urinary catheter blockage in older patients using objective indicators and to characterize obstructive materials and microbiota.\nDESIGN: A cross-sectional study.\nMETHODS: Patients aged ≥ 65 years with an indwelling catheter for ≥ 24 h were recruited from a long-term care hospital. Blockage was defined using objective indicators including residual urine volume, leakage, reinsertion urine volume and resistance to saline injection. Samples were analysed for composition and microbiota.\nRESULTS: Among 77 patients, 29.9% experienced catheter blockage. Blockage was associated with shorter catheterization duration and greater intraluminal narrowing. Proteus mirabilis and Campylobacter ureolyticus were more abundant. Most blockages occurred at the catheter tip (81.0%), with struvite as the predominant material (71.4%). Microbiota varied by material composition.\nCONCLUSION: Catheter blockage occurred in 29.9% of patients, mainly at the catheter tip and associated with struvite. Microbiota differed by blockage status and material composition.\nIMPLICATIONS FOR THE PROFESSION AND/OR PATIENT CARE: Objective identification of catheter blockage supports early detection and targeted management and provides a basis for research on mechanisms. These findings provide a foundation for future research to develop and evaluate evidence-based nursing interventions for preventing catheter blockage in older adults.\nIMPACT: This study addressed the lack of objective criteria and limited understanding of catheter blockage. It showed that about 30% of patients experienced blockage and identified distinct microbiota and material characteristics. These findings may improve catheter management and support future research on mechanisms and prevention.\nREPORTING METHOD: STROBE checklist.\nPATIENT OR PUBLIC CONTRIBUTION: Patients contributed to data collection by providing information on symptoms related to catheter blockage through structured assessments, while nurses during the study period facilitated data collection and conducted clinical assessments.",
