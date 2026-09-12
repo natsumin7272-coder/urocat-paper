@@ -1,5 +1,40 @@
 [
   {
+    "pmid": "42726500",
+    "title": "Experimental and machine learning-based investigation of ZnO-incorporated polyurethane/polyethylene glycol nanocomposite films for potential antibacterial urinary catheter film applications.",
+    "abstract": "Catheter-related urinary tract infections (CAUTIs) remain a critical healthcare-associated complication, motivating the development of antibacterial polymeric materials for catheter applications. In this study, zinc oxide (ZnO) nanoparticles prepared under two calcination conditions (designated as nominal <50 nm and nominal <100 nm size groups) were incorporated into polyurethane/polyethylene glycol (PU/PEG) films by solvent casting at loadings of 5, 10, 20, and 30 wt%. The materials were characterized using Fourier-transform infrared spectroscopy (FTIR), scanning electron microscopy (SEM), water contact-angle measurements, and disk-diffusion assays against Escherichia coli and Staphylococcus aureus. The antibacterial results demonstrated concentration-dependent inhibition, reaching maximum inhibition zones of 17 mm against E. coli and 16 mm against S. aureus at 30 wt% nominal <50 nm ZnO. To rigorously evaluate structure-property-function relationships and prevent model overfitting on a compact dataset, an exploratory Random Forest regression model was integrated using Leave-One-Out Cross-Validation (LOOCV). The cross-validated model showed good fit within the studied dataset. Quantitative feature importance ranking confirmed that ZnO concentration is the main governing factor of antibacterial efficacy (90.6%), followed by surface contact angle (8.3%), whereas nominal particle size category (0.4%) and bacterial species (0.6%) contributed minimally to overall variance. The results demonstrate the potential of cross-validated machine learning for exploratory feature screening in biomaterial design and indicate that ZnO-incorporated PU/PEG films warrant further investigation for potential urinary catheter applications. Direct coating adhesion, mechanical durability, cytocompatibility, release kinetics, biofilm inhibition, and performance on actual catheter substrates require future evaluation.",
+    "journal": "Journal of biomaterials science. Polymer edition",
+    "journal_abbr": "J Biomater Sci Polym Ed",
+    "authors": [
+      "Haleeful Jud",
+      "Haya Aijaz",
+      "Nisar Ahmad Wani"
+    ],
+    "doi": "10.1080/09205063.2026.2728707",
+    "publication_date": "2026-09-11",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42726500/",
+    "doi_url": "https://doi.org/10.1080/09205063.2026.2728707",
+    "search_categories": [
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で尿道カテーテル×抗菌材料／材料・技術",
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル技術",
+      "biofilm",
+      "coating",
+      "nanoparticle"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 4,
+    "fetched_at": "2026-09-12T00:03:59.712204+00:00"
+  },
+  {
     "pmid": "42659769",
     "title": "A tale of two catheters: STEMI in a patient presenting with acute urinary retention.",
     "abstract": "ST-segment elevation myocardial infarction (STEMI) classically presents with chest pain, yet 10-13% of patients present without it, leading to delayed diagnosis and worse outcomes. We report a 59-year-old man with prostate cancer who presented to the emergency department (ED) via emergency medical services (EMS) with acute penile and suprapubic pain from urinary retention. He denied chest pain, dyspnea, and other cardiac symptoms throughout his encounter. A prehospital 12‑lead electrocardiogram (ECG) revealed ST-segment elevations in leads II, III, and aVF, prompting a STEMI alert. In the ED, bladder ultrasonography confirmed distention, and Foley catheter placement resolved his obstruction and pain. Despite complete symptom resolution, persistent ST elevation prompted emergent catheterization, which revealed 100% occlusion of the right coronary artery (RCA). This case illustrates painless STEMI, the diagnostic value of prehospital ECG in patients with non-cardiac complaints, and the principle that persistent objective evidence of ischemia must not be dismissed when an alternative pain source is treated.",
