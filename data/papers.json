@@ -1,5 +1,87 @@
 [
   {
+    "pmid": "42740278",
+    "title": "Sensing in Urinary Catheter Systems: From Measurands and Signal Fidelity to Supportable Clinical Claims.",
+    "abstract": "This review evaluates urinary catheter sensors designed to warn of crystalline encrustation and blockage or to monitor infection-related microbial, interfacial, and host-response states. A source-to-claim framework links each measured state and sampling compartment with its readout, reference endpoint, and supportable clinical claim. The analysis also considers whether catheter integration preserves the relationship between source, readout, and claim. pH-responsive systems have the strongest human feasibility evidence, although the studies are small, use different sampling configurations, and include few blockage events. Evidence for urease sensing is confined to analytical studies and controlled in vitro experiments. Mineral-deposition and hydraulic approaches rely mainly on catheter models or adjacent-device studies. Most infection-related platforms are sample-based assays, prototypes, or short-duration systems that measure clinically non-equivalent states. Analyte detection alone cannot establish a diagnosis or predict a later event in either application. Interpretation also changes with sensor location and with the effects of transport, fouling, and mechanical loading on the recognition interface. Translation requires validation over complete catheter episodes against an endpoint matched to the intended claim. An additional channel is warranted only if it resolves a prespecified uncertainty and improves clinically relevant performance against a fixed comparator.",
+    "journal": "Sensors (Basel, Switzerland)",
+    "journal_abbr": "Sensors (Basel)",
+    "authors": [
+      "Shuai Zhang"
+    ],
+    "doi": "10.3390/s26175659",
+    "publication_date": "2026-09-15",
+    "publication_types": [
+      "Journal Article",
+      "Review"
+    ],
+    "mesh": [
+      "Humans",
+      "Urinary Catheters",
+      "Biosensing Techniques",
+      "Urinary Tract Infections",
+      "Biofilms",
+      "Urease",
+      "Hydrogen-Ion Concentration",
+      "Catheter-Related Infections"
+    ],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42740278/",
+    "doi_url": "https://doi.org/10.3390/s26175659",
+    "search_categories": [
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で尿道カテーテル×材料/技術／材料・技術",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル技術",
+      "blockage",
+      "encrustation",
+      "urease",
+      "crystal",
+      "biofilm",
+      "sensor"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-09-16T00:06:23.745091+00:00"
+  },
+  {
+    "pmid": "42740865",
+    "title": "Emphysematous cystitis treated with targeted antibiotic therapies: a report of two cases.",
+    "abstract": "Emphysematous cystitis (EC) is a rare, complicated urinary tract infection characterized by gas formation in and around the bladder wall, often occurring in older adults with diabetes mellitus, urinary tract obstruction, or long-term indwelling urinary catheters. EC can be easily misdiagnosed due to atypical symptoms and signs. Delayed treatment causes life-threatening complications like emphysematous pyelonephritis, bladder perforation, or septic shock. Here, we retrospectively analyzed two cases of EC who had been effectively treated and discharged following antibiotics, strict blood sugar control, bladder irrigation, and symptomatic and supportive treatment. Through literature review, we summarized the clinical characteristics, diagnostic skills, and therapeutic strategies for EC. Our experience may inform the early diagnosis and standardized management to improve the prognosis of EC.",
+    "journal": "Frontiers in medicine",
+    "journal_abbr": "Front Med (Lausanne)",
+    "authors": [
+      "Quanbo Yu",
+      "Yanhui Wang",
+      "Xinqi Zhang"
+    ],
+    "doi": "10.3389/fmed.2026.1821972",
+    "publication_date": "2026-09-15",
+    "publication_types": [
+      "Case Reports",
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42740865/",
+    "doi_url": "https://doi.org/10.3389/fmed.2026.1821972",
+    "search_categories": [
+      "長期管理・閉塞予防",
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で留置カテーテル×研究主題／閉塞・結晶",
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "obstruction",
+      "ヒト研究候補"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 4,
+    "fetched_at": "2026-09-16T00:06:23.745091+00:00"
+  },
+  {
     "pmid": "42726500",
     "title": "Experimental and machine learning-based investigation of ZnO-incorporated polyurethane/polyethylene glycol nanocomposite films for potential antibacterial urinary catheter film applications.",
     "abstract": "Catheter-related urinary tract infections (CAUTIs) remain a critical healthcare-associated complication, motivating the development of antibacterial polymeric materials for catheter applications. In this study, zinc oxide (ZnO) nanoparticles prepared under two calcination conditions (designated as nominal <50 nm and nominal <100 nm size groups) were incorporated into polyurethane/polyethylene glycol (PU/PEG) films by solvent casting at loadings of 5, 10, 20, and 30 wt%. The materials were characterized using Fourier-transform infrared spectroscopy (FTIR), scanning electron microscopy (SEM), water contact-angle measurements, and disk-diffusion assays against Escherichia coli and Staphylococcus aureus. The antibacterial results demonstrated concentration-dependent inhibition, reaching maximum inhibition zones of 17 mm against E. coli and 16 mm against S. aureus at 30 wt% nominal <50 nm ZnO. To rigorously evaluate structure-property-function relationships and prevent model overfitting on a compact dataset, an exploratory Random Forest regression model was integrated using Leave-One-Out Cross-Validation (LOOCV). The cross-validated model showed good fit within the studied dataset. Quantitative feature importance ranking confirmed that ZnO concentration is the main governing factor of antibacterial efficacy (90.6%), followed by surface contact angle (8.3%), whereas nominal particle size category (0.4%) and bacterial species (0.6%) contributed minimally to overall variance. The results demonstrate the potential of cross-validated machine learning for exploratory feature screening in biomaterial design and indicate that ZnO-incorporated PU/PEG films warrant further investigation for potential urinary catheter applications. Direct coating adhesion, mechanical durability, cytocompatibility, release kinetics, biofilm inhibition, and performance on actual catheter substrates require future evaluation.",
