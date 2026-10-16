@@ -1,5 +1,52 @@
 [
   {
+    "pmid": "42876447",
+    "title": "Safe and unsafe urinary catheter use in long-term care homes: a human factors-informed scoping review protocol.",
+    "abstract": "INTRODUCTION: Transurethral catheters are a type of urinary catheters that are commonly used in long-term care (LTC) settings to provide wound healing assistance, manage urinary retention and acute urinary obstruction. However, inappropriate and prolonged catheter use increases the risk of complications such as catheter-associated urinary tract infections (CAUTIs), blockages, leakage, trauma and discomfort, which negatively affects resident outcomes. In the LTC context, CAUTIs lead to increased morbidity, prolonged stay in hospitals and overall higher healthcare costs. Although clinical practice guidelines exist to support transurethral catheter management, evidence specific to LTC settings remains limited and has largely focused on clinical outcomes, with less attention given to the human factors and work system conditions that influence catheter-related care. Guided by the Systems Engineering Initiative for Patient Safety (SEIPS) framework, this scoping review aims to map and synthesize the existing evidence on transurethral catheter use in LTC homes, identify evidence-informed management practices, and examine the work system factors that influence safe and appropriate catheter use.\nMETHODS: The Joanna Briggs Institute (JBI) methodology will be followed for the scoping review in adherence to the PRISMA-ScR guidelines. A preliminary search was conducted in PROSPERO, MEDLINE and Cochrane Databases of Systematic review to refine and review terms, followed by comprehensive and final searches across multiple databases, including PubMed, CINAHL, Embase, MEDLINE, Web of Science and SCOPUS. Study selection will be completed using the Covidence systematic review software and eligible studies will focus on urinary catheter use and management in LTC globally with no date restriction. Studies will be included if full texts are available in English or French. The extracted and synthesized data will then be characterized thematically to identify themes and knowledge gaps.\nDISCUSSION: This scoping review will provide an extensive literature synthesis while identifying gaps in practices to enhance catheter management in LTC settings. Guided by the SEIPS framework, this review will examine how interactions among people, tasks, technology, the physical environment, and organizational factors influence transurethral catheter management.\nETHICS AND DISSEMINATION: This review acts as a knowledge synthesis tool based on existing literature and thus does not require any ethics approval. Summaries and findings can be used to guide future policies, guidelines, and healthcare reforms.",
+    "journal": "Frontiers in medicine",
+    "journal_abbr": "Front Med (Lausanne)",
+    "authors": [
+      "Sai Prashanti Mohan",
+      "Sneha Negi",
+      "Om Patel",
+      "Maya Pot",
+      "Khadija Aliyeva",
+      "Adeena Qudrat",
+      "Rayyan Qudrat",
+      "Lucas Scarvelis",
+      "Heather MacDonald",
+      "Samantha Boulerice",
+      "Benoît Robert",
+      "Chantal Trudel",
+      "Adrian D C Chan",
+      "Atul Jaiswal"
+    ],
+    "doi": "10.3389/fmed.2026.1939120",
+    "publication_date": "2026-10-15",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42876447/",
+    "doi_url": "https://doi.org/10.3389/fmed.2026.1939120",
+    "search_categories": [
+      "長期管理・閉塞予防",
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／閉塞・結晶",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "blockage",
+      "obstruction",
+      "ヒト研究候補"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-10-16T00:13:20.808909+00:00"
+  },
+  {
     "pmid": "42740278",
     "title": "Sensing in Urinary Catheter Systems: From Measurands and Signal Fidelity to Supportable Clinical Claims.",
     "abstract": "This review evaluates urinary catheter sensors designed to warn of crystalline encrustation and blockage or to monitor infection-related microbial, interfacial, and host-response states. A source-to-claim framework links each measured state and sampling compartment with its readout, reference endpoint, and supportable clinical claim. The analysis also considers whether catheter integration preserves the relationship between source, readout, and claim. pH-responsive systems have the strongest human feasibility evidence, although the studies are small, use different sampling configurations, and include few blockage events. Evidence for urease sensing is confined to analytical studies and controlled in vitro experiments. Mineral-deposition and hydraulic approaches rely mainly on catheter models or adjacent-device studies. Most infection-related platforms are sample-based assays, prototypes, or short-duration systems that measure clinically non-equivalent states. Analyte detection alone cannot establish a diagnosis or predict a later event in either application. Interpretation also changes with sensor location and with the effects of transport, fouling, and mechanical loading on the recognition interface. Translation requires validation over complete catheter episodes against an endpoint matched to the intended claim. An additional channel is warranted only if it resolves a prespecified uncertainty and improves clinically relevant performance against a fixed comparator.",
