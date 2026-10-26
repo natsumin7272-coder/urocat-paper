@@ -1,5 +1,49 @@
 [
   {
+    "pmid": "42923377",
+    "title": "Zwitterionic Coatings for Urinary Catheters: Current Progress, Design Principles and Translational Challenges.",
+    "abstract": "Catheter-associated urinary tract infection (CAUTI) is one of the most common healthcare-associated infections and remains a major cause of morbidity, catheter blockage, and repeated device replacement during long-term catheterization. This narrative review examines the interfacial processes that contribute to urinary catheter failure, including protein adsorption, microbial adhesion, biofilm formation, encrustation, and swarming-associated blockage, and evaluates how zwitterionic surface coatings may address these challenges. Drawing primarily on urinary catheter-specific studies, together with adjacent zwitterionic biomaterials literature where relevant to catheter design, this review synthesizes current coating strategies with emphasis on protein repellence, lubrication, biocompatibility, multifunctionalization, interface-specific design requirements, architectural trade-offs between hydrogel-like and brush-like coatings, and approaches to improve coating durability. The review also considers translation, including interim human evidence for zwitterion-treated urinary catheters, while recognizing that these data remain conference-reported and product-specific. Overall, zwitterionic coatings should be viewed not as a single antifouling solution, but as a versatile biomaterials platform for engineering multifunctional, durable, and clinically translatable urinary catheters. However, their long-term stability, resistance to complex biofilm and encrustation processes, and clinical efficacy require further validation. To define these remaining validation needs, the review compares PC-, SB-, and CB-based systems, stratifies evidence by model and duration, reports quantitative coating data where available, and identifies validation requirements across the product lifecycle.",
+    "journal": "ACS omega",
+    "journal_abbr": "ACS Omega",
+    "authors": [
+      "Chenghao Yao",
+      "Zhengda Wang",
+      "Sixu Yan",
+      "Shuai Zhang"
+    ],
+    "doi": "10.1021/acsomega.6c07621",
+    "publication_date": "2026-10-25",
+    "publication_types": [
+      "Journal Article",
+      "Review"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42923377/",
+    "doi_url": "https://doi.org/10.1021/acsomega.6c07621",
+    "search_categories": [
+      "Biofilm・微生物叢",
+      "新素材・コーティング",
+      "長期管理・閉塞予防",
+      "閉塞・結晶・ストルバイト"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／閉塞・結晶",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "blockage",
+      "encrustation",
+      "catheter blockage",
+      "biofilm",
+      "coating",
+      "hydrogel",
+      "antifouling"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-10-26T00:03:16.133697+00:00"
+  },
+  {
     "pmid": "42876447",
     "title": "Safe and unsafe urinary catheter use in long-term care homes: a human factors-informed scoping review protocol.",
     "abstract": "INTRODUCTION: Transurethral catheters are a type of urinary catheters that are commonly used in long-term care (LTC) settings to provide wound healing assistance, manage urinary retention and acute urinary obstruction. However, inappropriate and prolonged catheter use increases the risk of complications such as catheter-associated urinary tract infections (CAUTIs), blockages, leakage, trauma and discomfort, which negatively affects resident outcomes. In the LTC context, CAUTIs lead to increased morbidity, prolonged stay in hospitals and overall higher healthcare costs. Although clinical practice guidelines exist to support transurethral catheter management, evidence specific to LTC settings remains limited and has largely focused on clinical outcomes, with less attention given to the human factors and work system conditions that influence catheter-related care. Guided by the Systems Engineering Initiative for Patient Safety (SEIPS) framework, this scoping review aims to map and synthesize the existing evidence on transurethral catheter use in LTC homes, identify evidence-informed management practices, and examine the work system factors that influence safe and appropriate catheter use.\nMETHODS: The Joanna Briggs Institute (JBI) methodology will be followed for the scoping review in adherence to the PRISMA-ScR guidelines. A preliminary search was conducted in PROSPERO, MEDLINE and Cochrane Databases of Systematic review to refine and review terms, followed by comprehensive and final searches across multiple databases, including PubMed, CINAHL, Embase, MEDLINE, Web of Science and SCOPUS. Study selection will be completed using the Covidence systematic review software and eligible studies will focus on urinary catheter use and management in LTC globally with no date restriction. Studies will be included if full texts are available in English or French. The extracted and synthesized data will then be characterized thematically to identify themes and knowledge gaps.\nDISCUSSION: This scoping review will provide an extensive literature synthesis while identifying gaps in practices to enhance catheter management in LTC settings. Guided by the SEIPS framework, this review will examine how interactions among people, tasks, technology, the physical environment, and organizational factors influence transurethral catheter management.\nETHICS AND DISSEMINATION: This review acts as a knowledge synthesis tool based on existing literature and thus does not require any ethics approval. Summaries and findings can be used to guide future policies, guidelines, and healthcare reforms.",
