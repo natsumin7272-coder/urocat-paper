@@ -1,5 +1,42 @@
 [
   {
+    "pmid": "42969153",
+    "title": "Glyco-engineered mannose-graphene oxide/PVA/CD hybrid coatings: a smart surface functionalization strategy for antibacterial catheter applications.",
+    "abstract": "Catheter-associated infections are a major clinical concern, emphasizing the need for durable antibacterial coatings on medical device surfaces. In this study, a glyco-engineered hybrid coating based on mannose-functionalized graphene oxide (MAN-GO), polyvinyl alcohol (PVA), and carbon dots (CDs) was developed to improve surface functionality and infection resistance. The mannose modification of GO enhanced surface hydrophilicity and biological recognition, while the incorporation of carbon dots improved coating uniformity, dispersion, and stability. The composite coatings were applied onto polyurethane, PVC, and rubber substrates and characterized using FTIR, XRD, and FESEM, and detailed wettability studies, confirming successful hybrid formation and smooth surface morphology. Antibacterial studies demonstrated strong activity, with a pronounced inhibitory effect against Gram-negative Escherichia coli and substantial reduction of Staphylococcus aureus growth. Furthermore, the coatings exhibited 77.57% antibiofilm inhibition, indicating excellent resistance to bacterial colonization. The results highlight the potential of glyco-engineered MAN-GO/PVA/CD composites as promising antibacterial coatings for urinary catheters, offering a simple and effective strategy to prevent device-associated infections.",
+    "journal": "Journal of materials chemistry. B",
+    "journal_abbr": "J Mater Chem B",
+    "authors": [
+      "P K Archana",
+      "K Jyothika",
+      "Suni Vasudevan",
+      "Unnikrishnan Gopalakrishna Panicker"
+    ],
+    "doi": "10.1039/d6tb00442c",
+    "publication_date": "2026-11-02",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/42969153/",
+    "doi_url": "https://doi.org/10.1039/d6tb00442c",
+    "search_categories": [
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で尿道カテーテル×材料/技術／材料・技術",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル技術",
+      "biofilm",
+      "colonization",
+      "coating",
+      "antibiofilm"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 5,
+    "fetched_at": "2026-11-03T03:25:03.849689+00:00"
+  },
+  {
     "pmid": "42923377",
     "title": "Zwitterionic Coatings for Urinary Catheters: Current Progress, Design Principles and Translational Challenges.",
     "abstract": "Catheter-associated urinary tract infection (CAUTI) is one of the most common healthcare-associated infections and remains a major cause of morbidity, catheter blockage, and repeated device replacement during long-term catheterization. This narrative review examines the interfacial processes that contribute to urinary catheter failure, including protein adsorption, microbial adhesion, biofilm formation, encrustation, and swarming-associated blockage, and evaluates how zwitterionic surface coatings may address these challenges. Drawing primarily on urinary catheter-specific studies, together with adjacent zwitterionic biomaterials literature where relevant to catheter design, this review synthesizes current coating strategies with emphasis on protein repellence, lubrication, biocompatibility, multifunctionalization, interface-specific design requirements, architectural trade-offs between hydrogel-like and brush-like coatings, and approaches to improve coating durability. The review also considers translation, including interim human evidence for zwitterion-treated urinary catheters, while recognizing that these data remain conference-reported and product-specific. Overall, zwitterionic coatings should be viewed not as a single antifouling solution, but as a versatile biomaterials platform for engineering multifunctional, durable, and clinically translatable urinary catheters. However, their long-term stability, resistance to complex biofilm and encrustation processes, and clinical efficacy require further validation. To define these remaining validation needs, the review compares PC-, SB-, and CB-based systems, stratifies evidence by model and duration, reports quantitative coating data where available, and identifies validation requirements across the product lifecycle.",
