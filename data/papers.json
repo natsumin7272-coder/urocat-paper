@@ -1,5 +1,46 @@
 [
   {
+    "pmid": "43024937",
+    "title": "Binary-Crosslinked Alginate/Zwitterionic Interpenetrating Polymer Network Coatings for Lubricious and Antifouling Urinary Catheters.",
+    "abstract": "Hydrophilic hydrogel coatings can mitigate catheter-associated infections and friction-induced mucosal trauma during urinary catheterization by providing hydration-driven lubrication and antifouling surfaces. Here, we report an alginate/sulfobetaine methacrylate-based zwitterionic interpenetrating polymer network (Alg-ZW IPN) that integrates a binary crosslinker system into the IPN architecture by pairing a short-chain crosslinker, N,N'-methylenebisacrylamide (MbAm), with a long-chain crosslinker, poly(ethylene glycol) dimethacrylate (PEGDMA). In the binary crosslinked IPN (Alg-ZW BIPN), MbAm establishes dense local junctions for structural integrity, while PEGDMA spans the interjunction domains to mechanically bridge the network, confine alginate chains, and stabilize Ca2+-alginate coordination. This architecture redistributes mechanical stress across length scales, thereby improving coating durability. The Alg-ZW BIPN coating exhibited ultralow friction, with a friction coefficient of 0.01-0.02, and maintained 49% lower friction than MbAm single crosslinker coatings. In catheter insertion tests using a standard vascular phantom, the coating reduced insertion force by up to 75% compared with uncoated catheters. The coating also inhibited Escherichia coli adhesion by 97.4% relative to uncoated substrates and showed excellent biocompatibility, with a hemolysis ratio of 0.17% and >95% endothelial cell viability after 24 h. Overall, the Alg-ZW BIPN design provides a general and scalable route to mechanically robust, lubricious, and antifouling hydrogel interfaces for indwelling medical devices.",
+    "journal": "ACS applied materials & interfaces",
+    "journal_abbr": "ACS Appl Mater Interfaces",
+    "authors": [
+      "Young Ho Seo",
+      "Dong Uk Lee",
+      "Ji Ho Choi",
+      "Jeong Sang Son",
+      "Kang Bin Kim",
+      "Woojin Kim",
+      "Dong Yun Lee",
+      "Dong Yun Choi"
+    ],
+    "doi": "10.1021/acsami.6c19486",
+    "publication_date": "2026-11-14",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/43024937/",
+    "doi_url": "https://doi.org/10.1021/acsami.6c19486",
+    "search_categories": [
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／材料・技術",
+    "relevance_score": 4,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル技術",
+      "coating",
+      "hydrogel",
+      "antifouling",
+      "lubric"
+    ],
+    "topic": "新素材・コーティング",
+    "final_score": 4,
+    "fetched_at": "2026-11-15T01:42:58.872034+00:00"
+  },
+  {
     "pmid": "42969153",
     "title": "Glyco-engineered mannose-graphene oxide/PVA/CD hybrid coatings: a smart surface functionalization strategy for antibacterial catheter applications.",
     "abstract": "Catheter-associated infections are a major clinical concern, emphasizing the need for durable antibacterial coatings on medical device surfaces. In this study, a glyco-engineered hybrid coating based on mannose-functionalized graphene oxide (MAN-GO), polyvinyl alcohol (PVA), and carbon dots (CDs) was developed to improve surface functionality and infection resistance. The mannose modification of GO enhanced surface hydrophilicity and biological recognition, while the incorporation of carbon dots improved coating uniformity, dispersion, and stability. The composite coatings were applied onto polyurethane, PVC, and rubber substrates and characterized using FTIR, XRD, and FESEM, and detailed wettability studies, confirming successful hybrid formation and smooth surface morphology. Antibacterial studies demonstrated strong activity, with a pronounced inhibitory effect against Gram-negative Escherichia coli and substantial reduction of Staphylococcus aureus growth. Furthermore, the coatings exhibited 77.57% antibiofilm inhibition, indicating excellent resistance to bacterial colonization. The results highlight the potential of glyco-engineered MAN-GO/PVA/CD composites as promising antibacterial coatings for urinary catheters, offering a simple and effective strategy to prevent device-associated infections.",
