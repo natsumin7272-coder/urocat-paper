@@ -1,5 +1,41 @@
 [
   {
+    "pmid": "43051301",
+    "title": "Fluvoxamine disrupts Enterococcus faecalis biofilms by downregulating adhesion genes and binding biofilm proteins: a promising strategy for antimicrobial urinary catheter coatings.",
+    "abstract": "Catheter-associated urinary tract infections (CAUTI) are predominantly driven by biofilm formation on indwelling devices, which significantly complicates treatment and contributes to high morbidity and mortality. The increasing antimicrobial resistance has intensified the need for novel therapeutic and preventive strategies. In this study, we investigated fluvoxamine, a selective serotonin-norepinephrine reuptake inhibitor, for its antibacterial and antibiofilm potential against Enterococcus faecalis, a common CAUTI pathogen. Fluvoxamine exhibited potent antibacterial activity with a minimum inhibitory concentration (MIC) of 12.5 µg/mL. Time-kill kinetics revealed rapid bactericidal activity within 1 h, and combination studies demonstrated synergistic effects with conventional antibiotics. Fluvoxamine significantly inhibited biofilm formation and eradicated up to 89% of preformed mature E. faecalis biofilms. Scanning electron microscopy (SEM) corroborated these findings, revealing substantial disruption of biofilm architecture and morphological damage to bacterial cells. In an in vitro catheter model, fluvoxamine-coated catheter tubes effectively reduced bacterial colonization and maintained antibacterial efficacy for up to 48 h. Confocal laser scanning microscopy (CLSM) combined with FDA/PI staining confirmed reduced biofilm thickness and increased proportion of dead cells. Molecular docking analysis indicated a strong binding affinity of fluvoxamine to key E. faecalis biofilm-associated adhesion proteins. Furthermore, quantitative RT-PCR analysis showed significant downregulation of biofilm-related genes, including GelE, EbpA, AS, and EfaA. Collectively, our findings demonstrate that fluvoxamine possesses promising antibacterial and antibiofilm properties and highlight its potential as a novel catheter-coating agent for the prevention and management of E. faecalis-associated CAUTI.",
+    "journal": "Biofouling",
+    "journal_abbr": "Biofouling",
+    "authors": [
+      "Muhammad Musthafa Poyil",
+      "Mamoun Abdel Wahab AlFaki",
+      "Md Imtaiyaz Hassan"
+    ],
+    "doi": "10.1080/08927014.2026.2763376",
+    "publication_date": "2026-11-18",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/43051301/",
+    "doi_url": "https://doi.org/10.1080/08927014.2026.2763376",
+    "search_categories": [
+      "Biofilm・微生物叢"
+    ],
+    "eligible": true,
+    "eligibility_reason": "タイトルで尿道カテーテルが主題／biofilm・微生物",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "尿道/尿路カテーテル技術",
+      "biofilm",
+      "colonization",
+      "coating",
+      "antibiofilm"
+    ],
+    "topic": "Biofilm・微生物叢",
+    "final_score": 5,
+    "fetched_at": "2026-11-21T03:04:00.101510+00:00"
+  },
+  {
     "pmid": "43032820",
     "title": "Phage cocktail-loaded hydrogel coating prevents the biofilm formation of MDR Acinetobacter baumannii on indwelling medical devices.",
     "abstract": "INTRODUCTION: Indwelling catheters and implantable medical devices are vital in clinical care, but are often complicated by device-associated infections, especially caused by Acinetobacter baumannii. This pathogen readily colonizes device surfaces and forms biofilms, limiting the efficacy of current preventive strategies such as antimicrobial coatings and surface modifications.\nMETHODS: To address this, we developed a sodium alginate and polyvinyl alcohol-based hydrogel loaded with a bacteriophage cocktail against MDR Acinetobacter baumannii. Physicochemical characterisation of the hydrogel was tested, and the gel was coated onto the medical devices, including urinary catheter and Endotracheal tube.\nRESULTS & DISCUSSION: The system exhibited good biostability of the encapsulated phages and its sustained release behaviour, supporting the biomedical potential. The in vitro antibacterial assay demonstrated a clear zone of bacterial inhibition on the tested agar plates, and the antibiofilm assay showed a 4-5 log reduction in bacterial count in the Foley's urinary catheter and a 4-7 log reduction on endotracheal tube surfaces at their respective physiological pH. In summary, the developed SA-PVA bacteriophage cocktail-loaded hydrogel exhibited strong antibacterial and antibiofilm efficacy along with sustained phage release, highlighting its potential as a translational strategy for preventing MDR A. baumannii-associated device-related infections.",
