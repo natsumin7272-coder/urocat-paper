@@ -1,5 +1,46 @@
 [
   {
+    "pmid": "43093430",
+    "title": "A Bioactive Lycopene-Coated Catheter Novel Strategy Against Multidrug-Resistant Proteus mirabilis Catheter-Associated Urinary Tract Infections: Biofilm Disruption and rsbA-Mediated Mechanisms.",
+    "abstract": "Background: Catheter-associated urinary tract infections (CAUTIs) caused by multidrug-resistant (MDR) Proteus mirabilis pose a formidable clinical challenge due to the pathogen's exceptional capacity to form crystalline biofilms and exhibit hyper-swarming motility on indwelling medical devices, especially urinary catheters. Natural bioactive compounds, notably the carotenoid lycopene, have emerged as promising therapeutic candidates owing to their versatile anti-virulence properties. Consequently, this study aimed to develop and evaluate a bioactive lycopene-coated catheter strategy as a novel pharmaceutical intervention to combat strong biofilm-forming (SBF) MDR P. mirabilis-driven CAUTIs. Methods: The antibacterial activity of lycopene was determined using well diffusion and broth microdilution assays. In vitro antibiofilm efficacy was assessed via microtiter plate and medical-grade silicone catheter models. In situ structural changes within the biofilms were analyzed using light microscopy and confocal laser scanning microscopy (CLSM). Anti-swarming activity was evaluated using a motility plate assay. Liquid Christensen's medium was conducted to evaluate the effect on urease activity. Furthermore, the transcriptional impact of lycopene on the rsbA gene-a master regulator of swarming and biofilm formation-was investigated using quantitative real-time PCR (qRT-PCR). Results: Antibacterial assays demonstrated that lycopene exhibited potent activity against SBF MDR P. mirabilis isolates (n = 8), with inhibition zone diameters ranging from 19 mm to 34 mm and minimum inhibitory concentrations (MICs) between 40 and 160 µg/mL. At sub-MICs levels, lycopene significantly suppressed urease activity by 51.8% to 91.5%, swarming motility by 31% to 89%, and biofilm formation by 60.5% to 94%. Microscopic evaluations corroborated these findings, revealing immature biofilm architectures. In the silicone catheter model, lycopene-coated catheter segments markedly attenuated bacterial colonization, achieving biofilm inhibition rates of 69% to 96%. CLSM analysis further confirmed a substantial reduction in biofilm thickness on the coated catheters (14 µm) compared to uncoated controls (50 µm). Mechanistically, qRT-PCR revealed that lycopene robustly downregulated the expression of the rsbA gene (relative expression: 0.1-fold to 0.57-fold). Conclusions: As a foundational proof-of-concept, this study is the first to report the therapeutic potential of a bioactive lycopene-coated catheter strategy in preventing MDR P. mirabilis-mediated CAUTIs. The likely protective efficacy is driven by a synergistic combination of antibacterial, urease inhibitory, antibiofilm, and anti-swarming activities, highlighting its capacity as a possible protective agent against CAUTIs.",
+    "journal": "Pharmaceuticals (Basel, Switzerland)",
+    "journal_abbr": "Pharmaceuticals (Basel)",
+    "authors": [
+      "Raya Soltane",
+      "Ahmed M Nosair",
+      "Nuha Almulla",
+      "Eman Maher Zahran",
+      "Khaled B Al-Monofy"
+    ],
+    "doi": "10.3390/ph19111847",
+    "publication_date": "2026-11-26",
+    "publication_types": [
+      "Journal Article"
+    ],
+    "mesh": [],
+    "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/43093430/",
+    "doi_url": "https://doi.org/10.3390/ph19111847",
+    "search_categories": [
+      "新素材・コーティング"
+    ],
+    "eligible": true,
+    "eligibility_reason": "同一文で留置カテーテル×研究主題／材料・技術",
+    "relevance_score": 5,
+    "relevance_reasons": [
+      "留置尿道/尿路カテーテル",
+      "crystalline biofilm",
+      "urease",
+      "proteus mirabilis",
+      "crystal",
+      "biofilm",
+      "colonization",
+      "antibiofilm"
+    ],
+    "topic": "閉塞・結晶",
+    "final_score": 5,
+    "fetched_at": "2026-11-28T03:48:57.807001+00:00"
+  },
+  {
     "pmid": "43051301",
     "title": "Fluvoxamine disrupts Enterococcus faecalis biofilms by downregulating adhesion genes and binding biofilm proteins: a promising strategy for antimicrobial urinary catheter coatings.",
     "abstract": "Catheter-associated urinary tract infections (CAUTI) are predominantly driven by biofilm formation on indwelling devices, which significantly complicates treatment and contributes to high morbidity and mortality. The increasing antimicrobial resistance has intensified the need for novel therapeutic and preventive strategies. In this study, we investigated fluvoxamine, a selective serotonin-norepinephrine reuptake inhibitor, for its antibacterial and antibiofilm potential against Enterococcus faecalis, a common CAUTI pathogen. Fluvoxamine exhibited potent antibacterial activity with a minimum inhibitory concentration (MIC) of 12.5 µg/mL. Time-kill kinetics revealed rapid bactericidal activity within 1 h, and combination studies demonstrated synergistic effects with conventional antibiotics. Fluvoxamine significantly inhibited biofilm formation and eradicated up to 89% of preformed mature E. faecalis biofilms. Scanning electron microscopy (SEM) corroborated these findings, revealing substantial disruption of biofilm architecture and morphological damage to bacterial cells. In an in vitro catheter model, fluvoxamine-coated catheter tubes effectively reduced bacterial colonization and maintained antibacterial efficacy for up to 48 h. Confocal laser scanning microscopy (CLSM) combined with FDA/PI staining confirmed reduced biofilm thickness and increased proportion of dead cells. Molecular docking analysis indicated a strong binding affinity of fluvoxamine to key E. faecalis biofilm-associated adhesion proteins. Furthermore, quantitative RT-PCR analysis showed significant downregulation of biofilm-related genes, including GelE, EbpA, AS, and EfaA. Collectively, our findings demonstrate that fluvoxamine possesses promising antibacterial and antibiofilm properties and highlight its potential as a novel catheter-coating agent for the prevention and management of E. faecalis-associated CAUTI.",
